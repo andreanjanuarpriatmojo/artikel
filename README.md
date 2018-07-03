@@ -1,0 +1,2 @@
+# artikel
+kerja praktik asik
