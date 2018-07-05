@@ -13,3 +13,6 @@
 
 Route::view('/','welcome');
 Route::view('/artikel','artikel');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
