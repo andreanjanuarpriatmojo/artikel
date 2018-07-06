@@ -19,6 +19,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{url('css/bootstrap/bootstrap.min.css')}}">
+    <script src="{{url('js/jquery/jquery.min.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="{{url('js/bootstrap/bootstrap.min.js')}}"></script>
+
 </head>
 <body>
     <div id="app">
