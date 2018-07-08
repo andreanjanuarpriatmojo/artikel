@@ -19,4 +19,6 @@ Route::get('/home', 'HomeController@index');
 
 Route::resource('/coba','CobaController');
 
-Route::view('/admin','admin.login');
+Route::view('/admin','admin.index');
+Route::view('/login','admin.login');
+Route::view('/register','admin.register');

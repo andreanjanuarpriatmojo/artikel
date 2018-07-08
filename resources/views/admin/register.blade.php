@@ -22,11 +22,15 @@ Admin Page
                     <span class="input-group-addon"><i class="icon_key_alt"></i></span>
                     <input type="password" class="form-control" placeholder="Password">
                   </div>
+                  <div class="input-group" style="margin-top: 1em;margin-bottom: 1em;">
+                    <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+                    <input type="password" class="form-control" placeholder="Confirm Password">
+                  </div>
                   <label class="checkbox" style="margin-top: 1em;margin-bottom: 2em;">
                     <input type="checkbox" value="remember-me"> Remember me
-                    <span class="pull-right"> <a href="signup.html"> Belum punya akun?</a></span>
+                    <span class="pull-right"> <a href="signup.html"> Sudah punya akun?</a></span>
                   </label>
-                  <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                  <button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
                 </div> 
               </div>
             </div>
