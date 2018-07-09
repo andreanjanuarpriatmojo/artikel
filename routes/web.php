@@ -24,3 +24,6 @@ Route::view('/login','admin.login');
 Route::view('/register','admin.register');
 Route::view('/input/artikel','admin.input_artikel');
 Route::view('/input/kegiatan','admin.input_kegiatan');
+Route::view('/daftar/artikel','admin.daftar_artikel');
+Route::view('/daftar/kegiatan','admin.daftar_kegiatan');
+Route::view('/view','admin.view');
