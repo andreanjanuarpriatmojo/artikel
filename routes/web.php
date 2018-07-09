@@ -23,6 +23,7 @@ Route::view('/admin','admin.index');
 Route::view('/login','admin.login');
 Route::view('/register','admin.register');
 
+
 Route::resource('artikel', 'BlogController');
 
 /*
@@ -34,3 +35,5 @@ Route::get('/artikel/{id}/edit', 'BlogController@edit');
 Route::put('/artikel/{id}', 'BlogController@update');
 Route::delete('/artikel/{id}','BlogController@destroy');
 */
+Route::view('/input/artikel','admin.input_artikel');
+Route::view('/input/kegiatan','admin.input_kegiatan');
