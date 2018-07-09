@@ -37,9 +37,6 @@ Route::delete('/artikel/{id}','BlogController@destroy');
 */
 Route::view('/input/artikel','admin.input_artikel');
 Route::view('/input/kegiatan','admin.input_kegiatan');
-<<<<<<< HEAD
 Route::view('/daftar/artikel','admin.daftar_artikel');
 Route::view('/daftar/kegiatan','admin.daftar_kegiatan');
-Route::view('/view','admin.view');
-=======
->>>>>>> e2d96f295dd2d208bc38fcd29afb4c08fb547a7a
+Route::view('/view','artikel.index');
