@@ -22,3 +22,5 @@ Route::resource('/coba','CobaController');
 Route::view('/admin','admin.index');
 Route::view('/login','admin.login');
 Route::view('/register','admin.register');
+Route::view('/input/artikel','admin.input_artikel');
+Route::view('/input/kegiatan','admin.input_kegiatan');
