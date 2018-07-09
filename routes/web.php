@@ -24,7 +24,7 @@ Route::view('/login','admin.login');
 Route::view('/register','admin.register');
 
 
-Route::resource('artikel', 'BlogController');
+Route::resource('admin/artikel', 'BlogController');
 
 /*
 Route::get('/artikel', 'BlogController@index');
