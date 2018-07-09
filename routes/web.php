@@ -22,3 +22,15 @@ Route::resource('/coba','CobaController');
 Route::view('/admin','admin.index');
 Route::view('/login','admin.login');
 Route::view('/register','admin.register');
+
+Route::resource('artikel', 'BlogController');
+
+/*
+Route::get('/artikel', 'BlogController@index');
+Route::get('/artikel/create', 'BlogController@create');
+Route::post('/artikel', 'BlogController@store');
+Route::get('/artikel/{id}','BlogController@show');
+Route::get('/artikel/{id}/edit', 'BlogController@edit');
+Route::put('/artikel/{id}', 'BlogController@update');
+Route::delete('/artikel/{id}','BlogController@destroy');
+*/
