@@ -11,7 +11,7 @@
 |
 */
 
-Route::view('/','welcome');
+Route::view('/','artikel.index');
 Route::view('/artikel','artikel');
 Auth::routes();
 
@@ -38,11 +38,11 @@ Route::view('/input/kegiatan','admin.input-kegiatan');
 Route::view('/daftar/artikel','admin.daftar-artikel');
 Route::view('/daftar/kegiatan','admin.daftar-kegiatan');
 Route::view('/view','admin.view');
-Route::view('/input/artikel','admin.input_artikel');
-Route::view('/input/kegiatan','admin.input_kegiatan');
-Route::view('/daftar/artikel','admin.daftar_artikel');
-Route::view('/daftar/kegiatan','admin.daftar_kegiatan');
-Route::view('/view','artikel.index');
+//Route::view('/input/artikel','admin.input_artikel');
+//Route::view('/input/kegiatan','admin.input_kegiatan');
+//Route::view('/daftar/artikel','admin.daftar_artikel');
+//Route::view('/daftar/kegiatan','admin.daftar_kegiatan');
+//Route::view('/view','artikel.index');
 
 
 /*

@@ -1,9 +1,15 @@
 <?php
 
+
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image as Image;
+
 use App\blog;
+use File;
+use Storage;
 
 class BlogController extends Controller
 {
@@ -17,6 +23,8 @@ class BlogController extends Controller
     // {
     //     $this->middleware('auth');
     // }
+
+     public $timestamps = false;
 
 
     public function index()
@@ -50,37 +58,60 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        // $validator= \Validator::make($request->all(), [
-        //     'title' => 'required',
-        //     'photo_path' => 'required|file|max:2000|mimes:png,jpeg,jpg',
-        //     'text'=>'required'
-        // ]);
+
+        
+
+        if ($request->file('img')){
+            $b = new Blog();
+            $b->title = $request->title;
+            $b->text = $request->text;
+            $image = $request->file('img');
+            $fileName = $request->title.'.'.$image->getClientOriginalExtension();
+            $img = Image::make($image->getRealPath());
+            $img->stream();
+            Storage::disk('local')->put('images'.'/'.$fileName,$img,'public');
+            //dd($fileName);
+            $b->photo_path = $fileName;
+            $b->save();
+        }
+
+        
+    
+        // // $validator= \Validator::make($request->all(), [
+        // //     'title' => 'required',
+        // //     'photo_path' => 'required|file|max:2000|mimes:png,jpeg,jpg',
+        // //     'text'=>'required'
+        // // ]);
 
 
-        // if ($validator->fails()) {
-        //     return redirect()->route('artikel.create')->with('error', 'Upload Berita Gagal! Judul, Konten dan Foto tidak boleh kosong. Foto hanya bisa berekstensi jpeg/ jpg dan png.');
+        // //  if ($validator->fails()) {
+        // //      return redirect()->route('artikel.create')->with('error', 'Upload Berita Gagal! Judul, Konten dan Foto tidak boleh kosong. Foto hanya bisa berekstensi jpeg/ jpg dan png.');
+        // //  }
+
+        //  // $uploadedFile = $request->file('file');
+
+        //  // $extension = $uploadedFile->getClientOriginalExtension();
+
+        //   $name= "/blog".time().".".$extension;
+
+        // $b = new Blog();
+        // $b->title = $request->title;
+        // $b->text = $request->text;
+        // $b->photo_path = 'artikel/';
+        // if( $request->hasFile('img') ) {
+        // $file = $request->file('img');
+        // // Now you have your file in a variable that you can do things with
         // }
-
-        // $uploadedFile = $request->file('file');
-
-        // $extension = $uploadedFile->getClientOriginalExtension();
-
-        // $name= "/blog".time().".".$extension;
-
-        $b = new Blog();
-        $b->title = $request->title;
-        $b->text = $request->text;
-        $b->photo_path = 'artikel/';
-        $b->save();
-        // if ($b->save()){
-        //     $uploadedFile->move('files/blog', $name);
-        //     $path = $uploadedFile->storeAs(
-        //         'public/artikel/', $name
-        //     );
-        //     return redirect()->route('artikel')->with('success', 'Berita telah diupload!');
-        // }
-        // else return redirect()->route('artikel')->with('error', 'Berita gagal diupload!');
+        // Storage::disk('local')->put('images/','contents');
+        // $b->save();
+        //  // if ($b->save()){
+        //  //     $uploadedFile->move('files/blog', $name);
+        //  //     $path = $uploadedFile->storeAs(
+        //  //         'public/artikel/', $name
+        //  //     );
+        //  //     return redirect()->route('artikel')->with('success', 'Berita telah diupload!');
+        //  // }
+        //  // else return redirect()->route('artikel')->with('error', 'Berita gagal diupload!');
     }
 
     public function show($id)

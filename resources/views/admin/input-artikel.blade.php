@@ -17,7 +17,7 @@ Admin Page
                   <div class="panel-heading">Artikel</div>
                   <div class="panel-body">
                       <div class="row">
-                        <form class="" action="{{route('artikel.store')}}" method="POST">
+                        <form class="" action="{{route('artikel.store')}}" method="POST" enctype="multipart/form-data">
                                       {{ csrf_field() }}
                           <div class="col-md-8">
                             <div class="panel panel-default">
