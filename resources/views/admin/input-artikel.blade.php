@@ -17,13 +17,14 @@ Admin Page
                   <div class="panel-heading">Artikel</div>
                   <div class="panel-body">
                       <div class="row">
-                        <form>
+                        <form class="" action="{{route('artikel.store')}}" method="POST">
+                                      {{ csrf_field() }}
                           <div class="col-md-8">
                             <div class="panel panel-default">
                               <div class="panel-heading">Title</div>
                               <div class="panel-body">
                                 <div class="form-group">
-                                  <input class="form-control" type="text" name="title">
+                                  <input class="form-control" type="text" name="title" >
                                 </div>
                               </div>
                             </div>
@@ -49,7 +50,7 @@ Admin Page
                             </div>
                           </div>
                           <div class="col-md-8">
-                            <button class="btn btn-info btn-block" type="submit">Submit</button>
+                            <button  type="submit" name="button" class="btn btn-info btn-block" type="submit">Submit</button>
                           </div>
                         </form>
                       </div>

@@ -13,7 +13,6 @@ class BlogController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     
     // public function __construct()
     // {
     //     $this->middleware('auth');
@@ -22,9 +21,14 @@ class BlogController extends Controller
 
     public function index()
     {
-        //di web 
-        $all = Blog::orderBy('upload_date', 'DESC')->get();
-        return view('artikel',compact('all'));
+        $b = Blog::all();
+
+        for ($i=0; $i < $b->count(); $i++) {
+            if(str_word_count($b[$i]->text, 0)>150){
+                $b[$i]->text=preg_replace('/((\w+\W*){2}(\w+))(.*)/', '${1}', $b[$i]->text);
+            }
+        }
+        return view('admin.daftar-artikel')->with('b', $b);
     }
 
     /**
@@ -35,8 +39,7 @@ class BlogController extends Controller
     public function create()
     {
         //
-        return view('admin.input_artikel');
-
+        return view('admin.input-artikel');
     }
 
     /**
@@ -48,25 +51,44 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         //
-        $b = new blog();
+        // $validator= \Validator::make($request->all(), [
+        //     'title' => 'required',
+        //     'photo_path' => 'required|file|max:2000|mimes:png,jpeg,jpg',
+        //     'text'=>'required'
+        // ]);
+
+
+        // if ($validator->fails()) {
+        //     return redirect()->route('artikel.create')->with('error', 'Upload Berita Gagal! Judul, Konten dan Foto tidak boleh kosong. Foto hanya bisa berekstensi jpeg/ jpg dan png.');
+        // }
+
+        // $uploadedFile = $request->file('file');
+
+        // $extension = $uploadedFile->getClientOriginalExtension();
+
+        // $name= "/blog".time().".".$extension;
+
+        $b = new Blog();
         $b->title = $request->title;
         $b->text = $request->text;
-        $b->photo_path = $request->photo_path;
+        $b->photo_path = 'artikel/';
         $b->save();
+        // if ($b->save()){
+        //     $uploadedFile->move('files/blog', $name);
+        //     $path = $uploadedFile->storeAs(
+        //         'public/artikel/', $name
+        //     );
+        //     return redirect()->route('artikel')->with('success', 'Berita telah diupload!');
+        // }
+        // else return redirect()->route('artikel')->with('error', 'Berita gagal diupload!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //di web
         $view = Blog::where('id', $id)->first();
         // dd($view);
-        return view('artikel', compact('view'));
+        return view('admin.view-artikel', compact('view'));
     }
 
     /**
@@ -90,69 +112,6 @@ class BlogController extends Controller
     public function update(Request $request, $id)
     {
         //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-
-    public function view(){
-        return view('dashboard.admin.berita');
-    }
-
-    public function getBlogs(){
-        $blogs = Blog::all();
-
-        for ($i=0; $i < $blogs->count(); $i++) {
-            if(str_word_count($blogs[$i]->text, 0)>150){
-                $blogs[$i]->text=preg_replace('/((\w+\W*){2}(\w+))(.*)/', '${1}', $blogs[$i]->text);
-            }
-        }
-        return view('dashboard.admin.kumpulan-berita')->with('blogs', $blogs);
-
-    }
-
-    public function addBlog(Request $request){
-        $validator= \Validator::make($request->all(), [
-            'news_title' => 'required',
-            'file' => 'required|file|max:2000|mimes:png,jpeg,jpg',
-            'news_content'=>'required'
-        ]);
-
-
-        if ($validator->fails()) {
-            return redirect()->route('blogs')->with('error', 'Berita gagal diupload! Judul, konten dan file tidak boleh kosong. File hanya bisa jpeg/ jpg dan png.');
-        }
-
-        $uploadedFile = $request->file('file');
-
-        $extension = $uploadedFile->getClientOriginalExtension();
-
-        $name= "/blog".time().".".$extension;
-
-        $blogs = new Blog();
-        $blogs->title = $request->input('news_title');
-        $blogs->text = $request->input('news_content');
-        $blogs->photo_path = 'files/blog'.$name;
-        $blogs->upload_date = date('Y-m-d H:i:s');
-        if ($blogs->save()){
-            //$uploadedFile->move('files/blog', $name);
-            $path = $uploadedFile->storeAs(
-                'public/files/blog/', $name
-            );
-            return redirect()->route('blogs')->with('success', 'Berita telah diupload!');
-        }
-        else return redirect()->route('blogs')->with('error', 'Berita gagal diupload!');
-    }
-
-    public function updateBlog(Request $request, $id){
         $blogs = Blog::find($id);
         $newPhoto=0;
         $validator= \Validator::make($request->all(), [
@@ -162,7 +121,7 @@ class BlogController extends Controller
 
 
         if ($validator->fails()) {
-            return redirect()->route('news')->with('error', 'Berita gagal diperbaruhi!. Judul, konten dan file tidak boleh kosong. file hanya bisa jpeg/ jpg dan png.');
+            return redirect()->route('artikel.update')->with('error', 'Berita gagal diperbaruhi!. Judul, konten dan file tidak boleh kosong. file hanya bisa jpeg/ jpg dan png.');
         }
 
         if($request->hasFile('file')){
@@ -190,18 +149,27 @@ class BlogController extends Controller
         else return redirect()->back()->with('error', 'Berita gagal diperbaruhi!');
     }
 
-    public function updayteBlog($id){
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+        $b = Blog::find($id);
+        if ($b->delete())
+            return redirect()->route('artikel.show.blogs')->with('success', 'Berita telah dihapus!');
+        else
+            return redirect()->route('artikel.show')->with('error', 'Berita gagal dihapus!');
+    }
+
+    public function updayte($id){
         $blog = Blog::find($id);
         return view('dashboard.admin.view-berita')->with('blogs', $blog);
     }
 
-    public function deleteBlog($id){
-        $blog = Blog::find($id);
-        if ($blog->delete())
-            return redirect()->route('get.blogs')->with('success', 'Berita telah dihapus!');
-        else
-            return redirect()->route('get.blogs')->with('error', 'Berita gagal dihapus!');
-    }
 
 
 }
