@@ -26,10 +26,6 @@ class LoginController extends Controller
      * @var string
      */
 
-    public function showLoginForm()
-    {
-        return view('admin.login');
-    }
     protected $redirectTo = '/admin';
 
     /**
