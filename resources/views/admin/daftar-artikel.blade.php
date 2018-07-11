@@ -21,7 +21,7 @@ Admin Page
                           <table class="table table-hover">
                             <thead>
                               <tr>
-                                <th>ID</th>
+                                <th>No</th>
                                 <th>Title</th>
                                 <th>Admin</th>
                                 <th>Create Date</th>
@@ -33,10 +33,11 @@ Admin Page
                             </thead>
                             <tbody>
 
+                            <?php $i = 0; ?>
                               @foreach ($b as $b)
                               <tr>
                                 <td>
-                                    {{$b->id}}
+                                    {{$i++}}
                                 </td>
                                 <td>
                                     {{$b->title}}
@@ -48,7 +49,7 @@ Admin Page
                                   <a href="{{ url('admin/artikel',['id' => $b->id] )}}" type="button" class="btn btn-primary btn-block"> View
                                 </td>
                                 <td>
-                                  <button type="button" class="btn btn-success btn-block">Edit</button>
+                                  <a href="{{ url('admin/artikel/edit',['id' => $b->id])}}" type="button" class="btn btn-success btn-block"> Edit
                                 </td>
                                 <td>
                                   <form class="" action="{{route('artikel.destroy', $b->id)}}" method="post">

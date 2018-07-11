@@ -87,46 +87,35 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request, $id)
+    public function edit($id)
     {
-        //
-
-        $blogs = Blog::find($id);
-        $newPhoto=0;
-        $validator= \Validator::make($request->all(), [
-            'news_title' => 'required',
-            'news_content'=>'required'
-        ]);
-
-
-        if ($validator->fails()) {
-            return redirect()->route('news')->with('error', 'Berita gagal diperbaruhi!. Judul, konten dan file tidak boleh kosong. file hanya bisa jpeg/ jpg dan png.');
-        }
-
-        if($request->hasFile('file')){
-            $newPhoto=1;
-            $uploadedFile = $request->file('file');
-            $extension = $uploadedFile->getClientOriginalExtension();
-            $name= "/blog".time().".".$extension;
-            $blogs->photo_path = 'files/blog'.$name;
-
-        }
-
-
-        $blogs->title = $request->input('news_title');
-        $blogs->text = $request->input('news_content');
-        $blogs->upload_date = date('Y-m-d H:i:s');
-        if ($newPhoto && $blogs->save()){
-            $path = $uploadedFile->storeAs(
-                'public/files/blog/', $name
-            );
-
-            return redirect()->route('get.blogs')->with('success', 'Berita telah diperbaruhi!');
-        }else if ($blogs->save()){
-            return redirect()->route('get.blogs')->with('success', 'Berita telah diperbaruhi!');
-        }
-        else return redirect()->back()->with('error', 'Berita gagal diperbaruhi!');
+        $b = Blog::where('id', $id)->first();
+        return view('admin.update-artikel', compact('b'));
     }
+
+    public function update (Request $request, $id)
+    {
+        $b = Blog::find($id);
+
+        $b->title = $request->title;
+        $b->text = $request->text;
+
+        if ($request->hasFile('img')){
+            $image = $request->file('img');
+            $name = $image->getClientOriginalName();
+            $img = Image::make($image->getRealPath());
+            $img->stream();
+            $img->save(public_path('/uploads/images/'.$name));
+            $b->photo_path = $name;
+        }
+        if ($b->save()){
+            return redirect()->route('artikel')->with('success', 'Berita telah diupdate!');
+        }
+        else return redirect()->route('artikel')->with('error', 'Berita gagal diupdate!');
+
+    }
+
+
 
     /**
      * Update the specified resource in storage.
