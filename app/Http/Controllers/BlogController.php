@@ -60,13 +60,17 @@ class BlogController extends Controller
         if ($request->file('img')){
             $image = $request->file('img');
             $name = Input::file('img')->getClientOriginalName();
-            $fileName = $name;
+            $fileName = $name.'.'.$image->getClientOriginalExtension();
             $img = Image::make($image->getRealPath());
             $img->stream();
             $img->save(public_path('/uploads/images/'.$fileName));
             $b->photo_path = $fileName;
         }
-        $b->save();
+        //$b->save();
+        if ($b->save()){
+            return redirect()->route('artikel')->with('success', 'Berita telah diupload!');
+        }
+        else return redirect()->route('artikel')->with('error', 'Berita gagal diupload!');
 
     }
 
