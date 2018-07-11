@@ -30,12 +30,6 @@ class BlogController extends Controller
     public function index()
     {
         $b = Blog::all();
-
-        for ($i=0; $i < $b->count(); $i++) {
-            if(str_word_count($b[$i]->text, 0)>150){
-                $b[$i]->text=preg_replace('/((\w+\W*){2}(\w+))(.*)/', '${1}', $b[$i]->text);
-            }
-        }
         return view('admin.daftar-artikel')->with('b', $b);
     }
 
@@ -112,6 +106,12 @@ class BlogController extends Controller
         //  //     return redirect()->route('artikel')->with('success', 'Berita telah diupload!');
         //  // }
         //  // else return redirect()->route('artikel')->with('error', 'Berita gagal diupload!');
+    }
+
+    public function view($id){
+        $view = Blog::where('id', $id)->first();
+        // dd($view);
+        return view('pengumuman-more', compact('view'));
     }
 
     public function show($id)

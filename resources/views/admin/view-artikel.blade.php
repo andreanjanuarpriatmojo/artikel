@@ -18,11 +18,13 @@ Admin Page
                   <div class="panel-body">
                       <div class="container">
                         <div style="text-align: justify;">
-                          <h2>Ini title artikel/kegiatan</h2>
+                          <h2 >{{$b->title}}</h2>
                           <br>
-                          <img class="img-responsive" style="height: 400px" src="{{url('img/sapi.jpg')}}">
+                          <img src="{{asset('storage/app/images')}}/{{$blogs->photo_path}}" alt="{{$blogs->photo_path}}" style="height: 400px" class="img-responsive">
                           <br>
-                          <p>Sapi adalah hewan ternak anggota suku Bovidae dan anak suku Bovinae. Sapi yang telah dikebiri dan biasanya digunakan untuk membajak sawah dinamakan Lembu. Sapi dipelihara terutama untuk dimanfaatkan susu dan dagingnya sebagai pangan manusia. Hasil sampingan, seperti kulit, jeroan, tanduk, dan kotorannya juga dimanfaatkan untuk berbagai keperluan manusia. Di sejumlah tempat, sapi juga dipakai sebagai penggerak alat transportasi, pengolahan lahan tanam (bajak), dan alat industri lain (seperti peremas tebu). Karena banyak kegunaan ini, sapi telah menjadi bagian dari berbagai kebudayaan manusia sejak lama. Kebanyakan sapi ternak merupakan keturunan dari jenis liar yang dikenal sebagai Auerochse atau Urochse (dibaca auerokse, bahasa Jerman berarti "sapi kuno", nama ilmiah: Bos primigenius[1]), yang sudah punah di Eropa sejak 1627. Namun, terdapat beberapa spesies sapi liar lain yang keturunannya didomestikasi, termasuk sapi bali yang juga diternakkan di Indonesia.</p>
+                          <p>
+                            {{$b->text}}
+                          </p>
                         </div>
                       </div>
                   </div>
@@ -32,3 +34,9 @@ Admin Page
       </section>
     </section>
 @endsection
+
+<script type="text/javascript">
+  
+
+
+</script>

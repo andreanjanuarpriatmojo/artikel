@@ -21,7 +21,6 @@ Admin Page
                           <table class="table table-hover">
                             <thead>
                               <tr>
-                                <th>No</th>
                                 <th>ID</th>
                                 <th>Title</th>
                                 <th>Admin</th>
@@ -31,10 +30,15 @@ Admin Page
                               </tr>
                             </thead>
                             <tbody>
+
+                              @foreach ($b as $b)
                               <tr>
-                                <td>1</td>
-                                <td>29</td>
-                                <td>Pakan Ternak</td>
+                                <td>
+                                    {{$b->id}}
+                                </td>
+                                <td>
+                                    {{$b->title}}
+                                </td>
                                 <td>Ana</td>
                                 <td>
                                   <button type="button" class="btn btn-primary btn-block">View</button>
@@ -45,7 +49,7 @@ Admin Page
                                 <td>
                                   <button type="button" class="btn btn-danger btn-block">Delete</button>
                                 </td>
-                              </tr>
+                              @endforeach
                             </tbody>
                           </table>
                         </div>
