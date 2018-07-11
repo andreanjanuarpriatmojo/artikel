@@ -51,7 +51,12 @@ Admin Page
                                   <button type="button" class="btn btn-success btn-block">Edit</button>
                                 </td>
                                 <td>
-                                  <button type="button" class="btn btn-danger btn-block">Delete</button>
+                                  <form class="" action="{{route('artikel.destroy', $b->id)}}" method="post">
+                                    {{ method_field('DELETE') }}
+                                    {{ csrf_field() }}
+                                    <button type="submit" class="btn btn-alizarin">Hapus</button>
+
+                                  </form>
                                 </td>
                               @endforeach
                             </tbody>

@@ -53,8 +53,6 @@ class BlogController extends Controller
     public function store(Request $request)
     {
 
-        
-
         if ($request->file('img')){
             $b = new Blog();
             $b->title = $request->title;
@@ -68,44 +66,6 @@ class BlogController extends Controller
             $b->photo_path = $fileName;
             $b->save();
         }
-
-        
-    
-        // // $validator= \Validator::make($request->all(), [
-        // //     'title' => 'required',
-        // //     'photo_path' => 'required|file|max:2000|mimes:png,jpeg,jpg',
-        // //     'text'=>'required'
-        // // ]);
-
-
-        // //  if ($validator->fails()) {
-        // //      return redirect()->route('artikel.create')->with('error', 'Upload Berita Gagal! Judul, Konten dan Foto tidak boleh kosong. Foto hanya bisa berekstensi jpeg/ jpg dan png.');
-        // //  }
-
-        //  // $uploadedFile = $request->file('file');
-
-        //  // $extension = $uploadedFile->getClientOriginalExtension();
-
-        //   $name= "/blog".time().".".$extension;
-
-        // $b = new Blog();
-        // $b->title = $request->title;
-        // $b->text = $request->text;
-        // $b->photo_path = 'artikel/';
-        // if( $request->hasFile('img') ) {
-        // $file = $request->file('img');
-        // // Now you have your file in a variable that you can do things with
-        // }
-        // Storage::disk('local')->put('images/','contents');
-        // $b->save();
-        //  // if ($b->save()){
-        //  //     $uploadedFile->move('files/blog', $name);
-        //  //     $path = $uploadedFile->storeAs(
-        //  //         'public/artikel/', $name
-        //  //     );
-        //  //     return redirect()->route('artikel')->with('success', 'Berita telah diupload!');
-        //  // }
-        //  // else return redirect()->route('artikel')->with('error', 'Berita gagal diupload!');
     }
 
     public function show($id)
@@ -122,21 +82,10 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
         //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
         $blogs = Blog::find($id);
         $newPhoto=0;
         $validator= \Validator::make($request->all(), [
@@ -146,7 +95,7 @@ class BlogController extends Controller
 
 
         if ($validator->fails()) {
-            return redirect()->route('artikel.update')->with('error', 'Berita gagal diperbaruhi!. Judul, konten dan file tidak boleh kosong. file hanya bisa jpeg/ jpg dan png.');
+            return redirect()->route('news')->with('error', 'Berita gagal diperbaruhi!. Judul, konten dan file tidak boleh kosong. file hanya bisa jpeg/ jpg dan png.');
         }
 
         if($request->hasFile('file')){
@@ -175,24 +124,26 @@ class BlogController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Update the specified resource in storage.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function destroy($id)
     {
         //
         $b = Blog::find($id);
         if ($b->delete())
-            return redirect()->route('artikel.show.blogs')->with('success', 'Berita telah dihapus!');
+            return redirect()->view('admin.artikel')->with('success', 'Berita telah dihapus!');
         else
-            return redirect()->route('artikel.show')->with('error', 'Berita gagal dihapus!');
+            return redirect()->view('admin.artikel')->with('error', 'Berita gagal dihapus!');
     }
 
     public function updayte($id){
-        $blog = Blog::find($id);
-        return view('dashboard.admin.view-berita')->with('blogs', $blog);
+        $b = Blog::find($id);
+        return view('admin.view-artikel')->with('b', $b);
     }
 
 
