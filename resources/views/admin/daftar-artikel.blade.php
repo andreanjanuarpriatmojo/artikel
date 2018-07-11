@@ -28,7 +28,7 @@ Admin Page
                                 <th>Update Date</th>
                                 <th></th>
                                 <th></th>
-                                <th></th>
+                                <th><a type="button" class="btn btn-success btn-block"><i class="fa fa-plus"></i></a></th>
                               </tr>
                             </thead>
                             <tbody>
@@ -49,7 +49,7 @@ Admin Page
                                   <a href="{{ url('admin/artikel',['id' => $b->id] )}}" type="button" class="btn btn-primary btn-block"> View
                                 </td>
                                 <td>
-                                  <a href="{{ url('admin/artikel/edit',['id' => $b->id])}}" type="button" class="btn btn-success btn-block"> Edit
+                                  <a href="{{ url('admin/artikel/edit',['id' => $b->id])}}" type="button" class="btn btn-warning btn-block"> Edit
                                 </td>
                                 <td>
                                   <form class="" action="{{route('artikel.destroy', $b->id)}}" method="post">
