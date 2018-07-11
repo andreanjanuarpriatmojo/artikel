@@ -61,8 +61,11 @@ class BlogController extends Controller
             $fileName = $request->title.'.'.$image->getClientOriginalExtension();
             $img = Image::make($image->getRealPath());
             $img->stream();
-            Storage::disk('local')->put('images'.'/'.$fileName,$img,'public');
+            //Storage::disk('local')->put('images'.'/'.$fileName,$img,'public');
             //dd($fileName);
+            
+            $img->save(public_path('/uploads/images/'.$fileName));
+            
             $b->photo_path = $fileName;
             $b->save();
         }
