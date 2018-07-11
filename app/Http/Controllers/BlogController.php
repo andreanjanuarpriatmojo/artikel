@@ -6,7 +6,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image as Image;
-
+use Illuminate\Support\Facades\Input;
 use App\blog;
 use File;
 use Storage;
@@ -53,22 +53,21 @@ class BlogController extends Controller
     public function store(Request $request)
     {
 
+        $b = new Blog();
+        $b->title = $request->title;
+        $b->text = $request->text;
+
         if ($request->file('img')){
-            $b = new Blog();
-            $b->title = $request->title;
-            $b->text = $request->text;
             $image = $request->file('img');
-            $fileName = $request->title.'.'.$image->getClientOriginalExtension();
+            $name = Input::file('img')->getClientOriginalName();
+            $fileName = $name.'.'.$image->getClientOriginalExtension();
             $img = Image::make($image->getRealPath());
             $img->stream();
-            //Storage::disk('local')->put('images'.'/'.$fileName,$img,'public');
-            //dd($fileName);
-            
             $img->save(public_path('/uploads/images/'.$fileName));
-            
             $b->photo_path = $fileName;
-            $b->save();
         }
+        $b->save();
+
     }
 
     public function show($id)
@@ -139,9 +138,9 @@ class BlogController extends Controller
         //
         $b = Blog::find($id);
         if ($b->delete())
-            return redirect()->view('admin.artikel')->with('success', 'Berita telah dihapus!');
+            return redirect()->route('artikel')->with('success', 'Berita telah dihapus!');
         else
-            return redirect()->view('admin.artikel')->with('error', 'Berita gagal dihapus!');
+            return redirect()->route('artikel')->with('error', 'Berita gagal dihapus!');
     }
 
     public function updayte($id){
