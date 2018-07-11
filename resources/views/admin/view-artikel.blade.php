@@ -20,7 +20,7 @@ Admin Page
                         <div style="text-align: justify;">
                           <h2 >{{$b->title}}</h2>
                           <br>
-                          <img src="{{asset('storage/app/images')}}/{{$blogs->photo_path}}" alt="{{$blogs->photo_path}}" style="height: 400px" class="img-responsive">
+                          <img src="{{asset('storage/app/images')}}/{{$b->photo_path}}" alt="{{$b->photo_path}}" style="height: 400px" class="img-responsive">
                           <br>
                           <p>
                             {{$b->text}}

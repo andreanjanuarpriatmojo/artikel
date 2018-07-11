@@ -41,7 +41,7 @@ Admin Page
                                 </td>
                                 <td>Ana</td>
                                 <td>
-                                  <button type="button" class="btn btn-primary btn-block">View</button>
+                                  <a href="{{ url('admin/artikel',['id' => $b->id] )}}" type="button" class="btn btn-primary btn-block"> View
                                 </td>
                                 <td>
                                   <button type="button" class="btn btn-success btn-block">Edit</button>

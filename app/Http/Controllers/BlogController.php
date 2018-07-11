@@ -108,18 +108,12 @@ class BlogController extends Controller
         //  // else return redirect()->route('artikel')->with('error', 'Berita gagal diupload!');
     }
 
-    public function view($id){
-        $view = Blog::where('id', $id)->first();
-        // dd($view);
-        return view('pengumuman-more', compact('view'));
-    }
-
     public function show($id)
     {
         //di web
-        $view = Blog::where('id', $id)->first();
+        $b = Blog::where('id', $id)->first();
         // dd($view);
-        return view('admin.view-artikel', compact('view'));
+        return view('admin.view-artikel', compact('b'));
     }
 
     /**
