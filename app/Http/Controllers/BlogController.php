@@ -60,11 +60,10 @@ class BlogController extends Controller
         if ($request->file('img')){
             $image = $request->file('img');
             $name = Input::file('img')->getClientOriginalName();
-            $fileName = $name.'.'.$image->getClientOriginalExtension();
             $img = Image::make($image->getRealPath());
             $img->stream();
-            $img->save(public_path('/uploads/images/'.$fileName));
-            $b->photo_path = $fileName;
+            $img->save(public_path('/uploads/images/'.$name));
+            $b->photo_path = $name;
         }
         //$b->save();
         if ($b->save()){

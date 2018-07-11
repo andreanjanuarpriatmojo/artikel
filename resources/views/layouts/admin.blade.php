@@ -65,7 +65,7 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
           <li class="active">
-            <a class="" href="index.html">
+            <a class="" href="{{url('admin')}}">
                           <i class="icon_house_alt"></i>
                           <span>Dashboard</span>
                       </a>
@@ -77,7 +77,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="#">Artikel</a></li>
+              <li><a class="" href="{{url('artikel.create')}}">Artikel</a></li>
               <li><a class="" href="#">Kegiatan</a></li>
             </ul>
           </li>
@@ -88,7 +88,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="#">Artikel</a></li>
+              <li><a class="" href="{{url('artikel')}}">Artikel</a></li>
               <li><a class="" href="#">Kegiatan</a></li>
             </ul>
           </li>

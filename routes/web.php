@@ -11,8 +11,8 @@
 |
 */
 
-Route::view('/','artikel.index');
-Route::view('/artikel','artikel');
+//Route::view('/','artikel.index');
+//Route::view('/artikel','artikel');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
@@ -28,7 +28,7 @@ Route::put('/admin/artikel/{id}', 'BlogController@update')->name('artikel.update
 Route::delete('/admin/artikel/{id}','BlogController@destroy')->name('artikel.destroy');
 
 
-Route::view('/admin','admin.index');
+Route::view('/admin','admin.index')->name('admin');
 Route::view('/login','admin.login');
 Route::view('/register','admin.register');
 
@@ -38,18 +38,13 @@ Route::view('/register','admin.register');
 //conflict
 
 
-Route::view('/input/artikel','admin.input-artikel');
-Route::view('/input/kegiatan','admin.input-kegiatan');
+// Route::view('/input/artikel','admin.input-artikel');
+// Route::view('/input/kegiatan','admin.input-kegiatan');
 
-Route::view('/daftar/artikel','admin.daftar-artikel');
-Route::view('/daftar/kegiatan','admin.daftar-kegiatan');
-Route::view('/view','admin.view');
+// Route::view('/daftar/artikel','admin.daftar-artikel');
+// Route::view('/daftar/kegiatan','admin.daftar-kegiatan');
+// Route::view('/view','admin.view');
 
-
-Route::get('storage/{filename}', function ($filename)
-{
-    return Image::make(storage_path('public/' . $filename))->response();
-});
 
 //Route::view('/input/artikel','admin.input_artikel');
 //Route::view('/input/kegiatan','admin.input_kegiatan');
