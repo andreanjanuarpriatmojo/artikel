@@ -54,7 +54,7 @@ Admin Page
                                   <form class="" action="{{route('artikel.destroy', $b->id)}}" method="post">
                                     {{ method_field('DELETE') }}
                                     {{ csrf_field() }}
-                                    <button type="submit" class="btn btn-alizarin">Hapus</button>
+                                    <button type="submit" class="btn btn-danger btn-block">Hapus</button>
 
                                   </form>
                                 </td>
