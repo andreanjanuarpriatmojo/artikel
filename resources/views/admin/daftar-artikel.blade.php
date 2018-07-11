@@ -24,6 +24,8 @@ Admin Page
                                 <th>ID</th>
                                 <th>Title</th>
                                 <th>Admin</th>
+                                <th>Create Date</th>
+                                <th>Update Date</th>
                                 <th></th>
                                 <th></th>
                                 <th></th>
@@ -40,6 +42,8 @@ Admin Page
                                     {{$b->title}}
                                 </td>
                                 <td>Ana</td>
+                                <td>{{date('d-m-Y', strtotime($b->created_at))}}</td>
+                                <td>{{date('d-m-Y', strtotime($b->updated_at))}}</td>
                                 <td>
                                   <a href="{{ url('admin/artikel',['id' => $b->id] )}}" type="button" class="btn btn-primary btn-block"> View
                                 </td>
