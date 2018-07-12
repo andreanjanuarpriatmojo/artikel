@@ -54,6 +54,7 @@
 
       <!--logo start-->
       <a href="index.html" class="logo">Ad<span class="lite">min</span></a>
+      <h4 style="text-align: right;margin-right: 3em;margin-top: 1em"><i class="fa fa-user" style="margin-right: 10px"></i>{{ Auth::user()->name }}</h4>
       <!--logo end-->
 
     </header>
@@ -92,17 +93,11 @@
               <li><a class="" href="#">Kegiatan</a></li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
-              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-
-              <i class="icon_key_alt"></i>
-                  {{ Auth::user()->name }} <span class="caret"></span>
-              </a>
-
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{ route('logout') }}"
+          <li>
+                  <a href="{{ route('logout') }}"
                      onclick="event.preventDefault();
                                    document.getElementById('logout-form').submit();">
+                      <i class="icon_key_alt"></i>
                       {{ __('Logout') }}
                   </a>
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
