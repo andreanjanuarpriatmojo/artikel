@@ -20,16 +20,17 @@
                             <div class="col-md-6 zero_mp">
                                 <div class="Kegiatan_item">
                                     <div class="Kegiatan_img">
-                                        <img src="{{url('artikel/img/tree_cut_1.jpg')}}" alt="">
+                                        <img src="{{asset('uploads/images')}}/{{$b[0]->photo_path}}" alt="">
+
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6 zero_mp">
                                 <div class="Kegiatan_item">
                                     <div class="Kegiatan_text text-center">
-                                        <a href=""><h4>{{$b[10]->title}}</h4></a>
-                                        <h6>15-16 May in Dhaka</h6>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adip scing elit. Lorem ipsum dolor sit amet,consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <a href=""><h4>{{$b[0]->title}}</h4></a>
+                                        <h6>{{date('d-m-Y', strtotime($b[0]->updated_at))}}</h6>
+                                        <p>{{ strip_tags(str_limit($b[0]->text, 150)) }}</p>
                                         <a href="{{ url('pengumuman-more',['id' => $b[0]->id] )}}" class="Kegiatan_btn">read more</a>
                                     </div>
                                 </div>
@@ -40,17 +41,17 @@
                             <div class="col-md-6 zero_mp">
                                 <div class="Kegiatan_item">
                                     <div class="Kegiatan_text text-center">
-                                        <a href=""><h4>{{$b[10]->title}}</h4></a>
-                                        <h6>15-16 May in Dhaka</h6>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adip scing elit. Lorem ipsum dolor sit amet,consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        <a href="{{ url('pengumuman-more',['id' => $b[10]->id] )}}" class="Kegiatan_btn">read more</a>
+                                        <a href=""><h4>{{$b[1]->title}}</h4></a>
+                                        <h6>{{date('d-m-Y', strtotime($b[1]->updated_at))}}</h6>
+                                        <p>{{ strip_tags(str_limit($b[1]->text, 150)) }}</p>
+                                        <a href="{{ url('pengumuman-more',['id' => $b[1]->id] )}}" class="Kegiatan_btn">read more</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6 zero_mp">
                                 <div class="Kegiatan_item">
                                     <div class="Kegiatan_img">
-                                        <img src="{{url('artikel/img/tree_cut_2.jpg')}}" alt="">
+                                        <img src="{{asset('uploads/images')}}/{{$b[1]->photo_path}}" alt="">
                                     </div>
                                 </div>
                             </div>
