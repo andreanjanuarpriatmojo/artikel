@@ -17,17 +17,6 @@
                     You are logged in!
                 </div>
             </div>
-            <br>
-            <br>
-            <div class="card">
-                <div class="card-header">Coba input</div>
-                <div class="card-body">
-                    <form action="{{route('coba.store')}}"  method="post">
-                        <input type="text" name="nama" placeholder="coba2">
-                        <button type="submit">Submit!</button>
-                    </form>
-                </div>
-            </div>
         </div>
     </div>
 </div>
