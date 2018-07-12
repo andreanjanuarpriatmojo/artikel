@@ -75,11 +75,7 @@
         <section id="footer">
             <div class="container">
                 <div class="row text-center">
-                    <div class="col-md-6">
-                        <div class="copyright">
-                            <p> Karapan.id </p>
-                        </div>
-                    </div>
+                    <p> Karapan.id </p>
                 </div>
                 <!--End of row-->
             </div>
