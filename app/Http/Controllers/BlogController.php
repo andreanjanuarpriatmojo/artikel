@@ -1,13 +1,11 @@
 <?php
 
-
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image as Image;
 use Illuminate\Support\Facades\Input;
-use App\blog;
+use App\Blog;
 use File;
 use Storage;
 

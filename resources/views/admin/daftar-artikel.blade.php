@@ -28,12 +28,12 @@ Admin Page
                                 <th>Update Date</th>
                                 <th></th>
                                 <th></th>
-                                <th><a type="button" class="btn btn-success btn-block"><i class="fa fa-plus"></i></a></th>
+                                <th><a type="button" class="btn btn-success btn-block" href="{{url('admin/artikel/create')}}"><i class="fa fa-plus" ></i></a></th>
                               </tr>
                             </thead>
                             <tbody>
 
-                            <?php $i = 0; ?>
+                            <?php $i = 1; ?>
                               @foreach ($b as $b)
                               <tr>
                                 <td>
@@ -42,7 +42,7 @@ Admin Page
                                 <td>
                                     {{$b->title}}
                                 </td>
-                                <td>Ana</td>
+                                <td>{{ Auth::user()->name }}</td>
                                 <td>{{date('d-m-Y', strtotime($b->created_at))}}</td>
                                 <td>{{date('d-m-Y', strtotime($b->updated_at))}}</td>
                                 <td>
