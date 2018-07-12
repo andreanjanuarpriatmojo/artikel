@@ -57,14 +57,6 @@
                                 <a class="navbar-brand custom_navbar-brand" href=""><img src="{{url('artikel/img/Logo Karapan.png')}}" alt=""></a>
                             </div>
                             <!--End of navbar-header-->
-
-                            <!-- Collect the nav links, forms, and other content for toggling -->
-                            <div class="collapse navbar-collapse zero_mp" id="bs-example-navbar-collapse-1">
-                                <ul class="nav navbar-nav navbar-right main_menu">
-                                    <li class="active"><a href="#Kegiatan">Kegiatan <span class="sr-only">(current)</span></a></li>
-									<li><a href="#blog">Artikel</a></li>
-                                </ul>
-                            </div>
                             <!-- /.navbar-collapse -->
                         </nav>
                         <!--End of nav-->
