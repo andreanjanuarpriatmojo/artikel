@@ -8,7 +8,7 @@
                 <div class="row vol_area">
                     <div class="col-md-8">
                         <div class="volunteer_content">
-                            <h3>Become a <span>Volunteer</span></h3>
+                            <h3>Become a Volunteer</h3>
                             <p>Join Our Team And Help the world. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur.</p>
                         </div>
                     </div>
