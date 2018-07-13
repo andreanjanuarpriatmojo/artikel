@@ -28,10 +28,6 @@
                                                 <span class="clock"><i class="fa fa-clock-o"></i></span>
                                                 <span class="time">Aug 19, 2016</span>
                                             </p>
-                                            <p class="right_side text-right">
-                                                <a href=""><span class="right_msg text-right"><i class="fa fa-comments-o"></i></span>
-                                                    <span class="count">0</span></a>
-                                            </p>
                                         </div>
                                     </div>
 
@@ -56,10 +52,6 @@
                                                 <span class="clock"><i class="fa fa-clock-o"></i></span>
                                                 <span class="time">Aug 19, 2016</span>
                                             </p>
-                                            <p class="right_side text-right">
-                                                <a href=""><span class="right_msg text-right"><i class="fa fa-comments-o"></i></span>
-                                                    <span class="count">0</span></a>
-                                            </p>
                                         </div>
                                     </div>
 
@@ -83,10 +75,6 @@
                                             <p class="left_side">
                                                 <span class="clock"><i class="fa fa-clock-o"></i></span>
                                                 <span class="time">Aug 19, 2016</span>
-                                            </p>
-                                            <p class="right_side text-right">
-                                                <a href=""><span class="right_msg text-right"><i class="fa fa-comments-o"></i></span>
-                                                    <span class="count">0</span></a>
                                             </p>
                                         </div>
                                     </div>
