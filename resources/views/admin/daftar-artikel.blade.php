@@ -28,7 +28,7 @@ Admin Page
                                 <th>Update Date</th>
                                 <th></th>
                                 <th></th>
-                                <th><a type="button" class="btn btn-success btn-block" href="{{url('admin/artikel/create')}}"><i class="fa fa-plus" ></i></a></th>
+                                <th><a type="button" class="btn btn-success btn-block" href="{{url('admin/artikel/create')}}">Tambah</a></th>
                               </tr>
                             </thead>
                             <tbody>

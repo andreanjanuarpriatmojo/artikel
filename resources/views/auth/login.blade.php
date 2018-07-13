@@ -1,4 +1,4 @@
-@extends('layouts.auth')
+@extends('layouts.login')
 
 @section('title')
 Admin Page
@@ -54,15 +54,12 @@ Admin Page
                         </div>
 
                         <div class="form-group">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-block">
-                                    {{ __('Login') }}
-                                </button>
-                                <br>
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
-                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                {{ __('Login') }}
+                            </button>
+                            <a class="btn btn-link" href="{{ route('password.request') }}">
+                                {{ __('Forgot Your Password?') }}
+                            </a>
                         </div>
                     </form>
                 </div>
