@@ -293,8 +293,8 @@ input: -webkit-autofill:focus {
 }
 #Kegiatan .Kegiatan_text {
     padding: 30px 30px 0;
-    background: #eff0f2;
-    min-height: 279px;
+    background: #ffffff;
+    min-height: 10px;
 }
 #Kegiatan .Kegiatan_item img {
     width: 100%;

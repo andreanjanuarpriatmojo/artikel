@@ -21,7 +21,7 @@
                                     <img src="{{url('artikel/img/climate_effect.jpg')}}" alt="">
                                 </div>
                                 <div class="blog_content">
-                                    <a href=""><h3>Climate change is affecting bird migration</h3></a>
+                                    <h3>Climate change is affecting bird migration</h3>
                                     <div class="expert">
                                         <div class="left-side text-left">
                                             <p class="left_side">
@@ -32,7 +32,7 @@
                                     </div>
 
                                     <p class="blog_news_content">Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit. </p>
-                                    <a href="" class="blog_link">read more</a>
+                                    <a href="{{url('isi')}}" class="blog_link">read more</a>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                                     <img src="{{url('artikel/img/air_pollutuon.jpg')}}" alt="">
                                 </div>
                                 <div class="blog_content">
-                                    <a href=""><h3>How to avoid indoor air pollution?</h3></a>
+                                    <h3>How to avoid indoor air pollution?</h3>
                                     <div class="expert">
                                         <div class="left-side text-left">
                                             <p class="left_side">
@@ -56,7 +56,7 @@
                                     </div>
 
                                     <p class="blog_news_content">Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit. </p>
-                                    <a href="" class="blog_link">read more</a>
+                                    <a href="{{url('isi')}}" class="blog_link">read more</a>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +69,7 @@
                                     <img src="{{url('artikel/img/threat_bear.jpg')}}" alt="">
                                 </div>
                                 <div class="blog_content">
-                                    <a href=""><h3>Threat to Yellowstone’s grizzly bears.</h3></a>
+                                    <h3>Threat to Yellowstone’s grizzly bears.</h3>
                                     <div class="expert">
                                         <div class="left-side text-left">
                                             <p class="left_side">
@@ -80,7 +80,7 @@
                                     </div>
 
                                     <p class="blog_news_content">Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit. </p>
-                                    <a href="" class="blog_link">read more</a>
+                                    <a href="{{url('isi')}}" class="blog_link">read more</a>
                                 </div>
                             </div>
                         </div>

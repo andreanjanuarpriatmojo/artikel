@@ -28,7 +28,23 @@
 										Etiam pharetra euismod enim eu tempor. Curabitur egestas lorem et magna dapibus sollicitudin. Aenean mattis interdum consectetur. Phasellus aliquam nisl eu commodo porta. Aenean euismod nunc in libero hendrerit suscipit. Duis tempus ligula nisi, nec finibus ligula iaculis a. Curabitur id enim felis. Sed ligula enim, accumsan ac velit ac, condimentum rhoncus tortor.</p>
                 					</div>
                 		</div>
+                        <br>
+                        <div class="col-md-6 zero_mp">
+                            <div class="Kegiatan_item">
+                                <div class="Kegiatan_text text-left">
+                                    <a href="{{url('isi')}}"><h6>Oldest Post</h6></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 zero_mp">
+                            <div class="Kegiatan_item">
+                                <div class="Kegiatan_text text-right">
+                                    <a href="{{url('isi')}}"><h6>Newest Post</h6></a>
+                                </div>
+                            </div>
+                        </div>
             		</div>
+
                     <!--End of col-md-8-->
                     <div class="col-md-4">
                     	<div class="Kegiatan_news_text">
@@ -40,7 +56,7 @@
                                     	<img src="{{url('artikel/img/tree_cut_3.jpg')}}" alt="">
                                 	</div>
                                 	<div class="Kegiatan_news_text">
-                                    	<a href="#"><h4>Let’s plant 200 tree each...</h4></a>
+                                    	<a href="{{url('isi')}}"><h4>Let’s plant 200 tree each...</h4></a>
                                     	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veniam.</p>
                                 	</div>
                             	</div>
@@ -51,7 +67,7 @@
             		                        <img src="{{url('artikel/img/tree_cut_4.jpg')}}" alt="">
                 		                </div>
  		                                <div class="Kegiatan_news_text">
-         		                           <a href="#"><h4>Keep your house envirome..</h4></a>
+         		                           <a href="{{url('isi')}}"><h4>Keep your house envirome..</h4></a>
                 		                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veniam.</p>
        			                        </div>
                             	</div>
@@ -62,7 +78,7 @@
                                     	<img src="{{url('artikel/img/tree_cut_3.jpg')}}" alt="">
                                 	</div>
                                 	<div class="Kegiatan_news_text">
-                                    	<a href="#"><h4>Urgent Clothe Needed Needed</h4></a>
+                                    	<a href="{{url('isi')}}"><h4>Urgent Clothe Needed Needed</h4></a>
                                     	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veniam.</p>
                                 	</div>
                             	</div>
@@ -73,7 +89,7 @@
                                     	<img src="{{url('artikel/img/tree_cut_4.jpg')}}" alt="">
                                 	</div>
                                 	<div class="Kegiatan_news_text">
-                                    	<a href="#"><h4>One Tree Thousand Hope</h4></a>
+                                    	<a href="{{url('isi')}}"><h4>One Tree Thousand Hope</h4></a>
                                     	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veniam.</p>
                                 	</div>
                             	</div>
@@ -84,7 +100,7 @@
                                     	<img src="{{url('artikel/img/tree_cut_3.jpg')}}" alt="">
                                 	</div>
                                 	<div class="Kegiatan_news_text">
-                                    	<a href="#"><h4>One Tree Thousand Hope</h4></a>
+                                    	<a href="{{url('isi')}}"><h4>One Tree Thousand Hope</h4></a>
                                     	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veniam.</p>
                                 	</div>
                             	</div>

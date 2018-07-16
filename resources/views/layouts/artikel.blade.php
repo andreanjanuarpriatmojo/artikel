@@ -45,21 +45,7 @@
             <div class="header-area">
                 <div class="header_menu text-center" data-spy="affix" data-offset-top="50" id="nav">
                     <div class="container">
-                        <nav class="navbar navbar-default zero_mp ">
-                            <!-- Brand and toggle get grouped for better mobile display -->
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                                <a class="navbar-brand custom_navbar-brand" href=""><img src="{{url('artikel/img/Logo Karapan.png')}}" alt=""></a>
-                            </div>
-                            <!--End of navbar-header-->
-                            <!-- /.navbar-collapse -->
-                        </nav>
-                        <!--End of nav-->
+                        <a class="navbar-brand custom_navbar-brand" href="{{url('blog')}}"><img src="{{url('artikel/img/Logo Karapan.png')}}" alt=""></a>
                     </div>
                     <!--End of container-->
                 </div>

@@ -15,7 +15,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::view('/blog','artikel.index');
-Route::view('/isi', 'isi artikel.index');
+Route::view('/isi', 'isi_artikel.index');
 Route::get('/admin/artikel', 'BlogController@index')->name('artikel');
 Route::get('/admin/artikel/create', 'BlogController@create')->name('artikel.create');
 Route::post('/admin/artikel', 'BlogController@store')->name('artikel.store');
