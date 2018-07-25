@@ -1,4 +1,4 @@
-@extends('layouts.auth')
+@extends('layouts.register')
 
 @section('title')
 Admin Page
