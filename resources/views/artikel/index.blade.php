@@ -18,21 +18,21 @@
                         <div class="blog_news">
                             <div class="single_blog_item">
                                 <div class="blog_img">
-                                    <img src="{{url('artikel/img/climate_effect.jpg')}}" alt="">
+                                    <img src="{{asset('uploads/images')}}/{{$b[0]->photo_path}}" alt="">
                                 </div>
                                 <div class="blog_content">
-                                    <h3>Climate change is affecting bird migration</h3>
+                                    <h3>{{$b[0]->title}}</h3>
                                     <div class="expert">
                                         <div class="left-side text-left">
                                             <p class="left_side">
                                                 <span class="clock"><i class="fa fa-clock-o"></i></span>
-                                                <span class="time">Aug 19, 2016</span>
+                                                <span class="time">{{date('d-m-Y', strtotime($b[0]->updated_at))}}</span>
                                             </p>
-                                        </div>
+                                        </div>  
                                     </div>
 
-                                    <p class="blog_news_content">Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit. </p>
-                                    <a href="{{url('isi')}}" class="blog_link">read more</a>
+                                    <p class="blog_news_content">{{ strip_tags(str_limit($b[0]->text, 150)) }}</p>
+                                    <a href="{{ url('blog',['id' => $b[0]->id] )}}" class="blog_link">read more</a>
                                 </div>
                             </div>
                         </div>
@@ -42,21 +42,21 @@
                         <div class="blog_news">
                             <div class="single_blog_item">
                                 <div class="blog_img">
-                                    <img src="{{url('artikel/img/air_pollutuon.jpg')}}" alt="">
+                                    <img src="{{asset('uploads/images')}}/{{$b[1]->photo_path}}" alt="">
                                 </div>
                                 <div class="blog_content">
-                                    <h3>How to avoid indoor air pollution?</h3>
+                                    <h3>{{$b[1]->title}}</h3>
                                     <div class="expert">
                                         <div class="left-side text-left">
                                             <p class="left_side">
                                                 <span class="clock"><i class="fa fa-clock-o"></i></span>
-                                                <span class="time">Aug 19, 2016</span>
+                                                <span class="time">{{date('d-m-Y', strtotime($b[1]->updated_at))}}</span>
                                             </p>
                                         </div>
                                     </div>
 
-                                    <p class="blog_news_content">Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit. </p>
-                                    <a href="{{url('isi')}}" class="blog_link">read more</a>
+                                    <p class="blog_news_content">{{ strip_tags(str_limit($b[1]->text, 150)) }}</p>
+                                    <a href="{{ url('blog',['id' => $b[1]->id] )}}" class="blog_link">read more</a>
                                 </div>
                             </div>
                         </div>
@@ -66,21 +66,21 @@
                         <div class="blog_news">
                             <div class="single_blog_item">
                                 <div class="blog_img">
-                                    <img src="{{url('artikel/img/threat_bear.jpg')}}" alt="">
+                                    <img src="{{asset('uploads/images')}}/{{$b[2]->photo_path}}" alt="">
                                 </div>
                                 <div class="blog_content">
-                                    <h3>Threat to Yellowstone’s grizzly bears.</h3>
+                                    <h3>{{$b[2]->title}}</h3>
                                     <div class="expert">
                                         <div class="left-side text-left">
                                             <p class="left_side">
                                                 <span class="clock"><i class="fa fa-clock-o"></i></span>
-                                                <span class="time">Aug 19, 2016</span>
+                                                <span class="time">{{date('d-m-Y', strtotime($b[2]->updated_at))}}</span>
                                             </p>
                                         </div>
                                     </div>
 
-                                    <p class="blog_news_content">Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit. </p>
-                                    <a href="{{url('isi')}}" class="blog_link">read more</a>
+                                    <p class="blog_news_content">{{ strip_tags(str_limit($b[2]->text, 150)) }}</p>
+                                    <a href="{{ url('blog',['id' => $b[2]->id] )}}" class="blog_link">read more</a>
                                 </div>
                             </div>
                         </div>

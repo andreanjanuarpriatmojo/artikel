@@ -13,9 +13,9 @@
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
-Route::view('/blog','artikel.index');
-Route::view('/isi', 'isi_artikel.index');
+Route::get('/blog','FrontController@index');
+Route::get('/blog/{id}','FrontController@view');
+Route::view('/isi', 'artikel.artikel');
 Route::get('/admin/artikel', 'BlogController@index')->name('artikel');
 Route::get('/admin/artikel/create', 'BlogController@create')->name('artikel.create');
 Route::post('/admin/artikel', 'BlogController@store')->name('artikel.store');
@@ -24,31 +24,11 @@ Route::get('/admin/artikel/edit/{id}', 'BlogController@edit')->name('artikel.edi
 Route::put('/admin/artikel/{id}', 'BlogController@update')->name('artikel.update');
 Route::delete('/admin/artikel/{id}','BlogController@destroy')->name('artikel.destroy');
 Route::view('/admin','admin.index')->name('admin')->middleware('auth');
-
-Route::get('/front', 'FrontController@index');
+//Route::get('/front', 'FrontController@index');
 // Route::view('/login','admin.login');
 // Route::view('/register','admin.register');
 
 
 //Route::resource('admin/artikel', 'BlogController');
-
-//conflict
-
-
-// Route::view('/input/artikel','admin.input-artikel');
-// Route::view('/input/kegiatan','admin.input-kegiatan');
-
-// Route::view('/daftar/artikel','admin.daftar-artikel');
-// Route::view('/daftar/kegiatan','admin.daftar-kegiatan');
-// Route::view('/view','admin.view');
-
-
-//Route::view('/input/artikel','admin.input_artikel');
-//Route::view('/input/kegiatan','admin.input_kegiatan');
-//Route::view('/daftar/artikel','admin.daftar_artikel');
-//Route::view('/daftar/kegiatan','admin.daftar_kegiatan');
-//Route::view('/view','artikel.index');
-
-
 /*
 */

@@ -8,24 +8,16 @@
                 <div class="row">
                     <div class="col-md-8">
                 		<div class="Kegiatan_news_text">
-                    		<h3>Become a Volunteer</h3>
+                    		<h3>{{$view->title}}</h3>
                     			<p class="left_side">
                                                 <span class="clock"><i class="fa fa-clock-o"></i></span>
-                                                <span class="time">Aug 19, 2016</span>
+                                                <span class="time">{{date('d-m-Y', strtotime($view->updated_at))}}</span>
                                 </p>
                                 <br> <br>
                     				<div class="event_img">
-                    					<img src="{{url('artikel/img/tree_cut_1.jpg')}}" alt="">
-                    					<br> <br>
-                    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis felis a odio facilisis tristique. Donec efficitur vitae elit sit amet finibus. In auctor mauris sit amet feugiat pulvinar. Sed nunc nisi, sagittis et consectetur sed, placerat a ex. Sed rutrum libero et dignissim efficitur. Donec varius porttitor tincidunt. Morbi vitae tincidunt diam. Mauris dictum sit amet orci at tristique. Pellentesque condimentum sit amet orci vitae tempus. Aenean ullamcorper posuere tellus, et pretium magna pharetra et. Maecenas semper sed eros quis lobortis. Proin laoreet tincidunt porta. Donec placerat ante a consequat efficitur. Nam ut erat eget nisi bibendum tristique vel non diam. Aliquam vel vestibulum urna. Morbi eget cursus lectus. <br> <br>
-
-										Aliquam erat volutpat. Maecenas id eros lorem. Aenean nec massa ut purus laoreet pellentesque. Ut eu augue a metus dictum lobortis. Nam a dictum nisi. Fusce sed felis bibendum, consequat dolor eu, pellentesque elit. Nulla eu tempus turpis. Donec dui arcu, tristique sed felis ut, feugiat consequat lacus. Pellentesque imperdiet orci nec elementum auctor. Donec lobortis tortor sit amet ipsum euismod commodo. Proin eget massa tincidunt nisl consequat tempor. <br> <br>
-
-										Duis feugiat nisl at pretium feugiat. Vivamus sit amet ullamcorper risus. Praesent pulvinar vulputate dolor nec placerat. Donec euismod vitae nulla a varius. Curabitur gravida magna ac pretium vehicula. Praesent imperdiet nisl ac nulla varius sagittis. Mauris eu porta felis, sed consectetur ligula. Integer in massa arcu. Nullam vehicula dolor viverra turpis aliquet consectetur. Integer vitae tempus dui. Sed suscipit, ante nec faucibus laoreet, erat massa rutrum massa, a viverra eros metus nec diam. Fusce tristique at nulla et rutrum. Vivamus pretium erat sed nulla maximus, eget ultricies orci posuere. Morbi pretium libero eget nulla vehicula, non tincidunt tortor hendrerit. Curabitur libero ex, sagittis eget massa sed, accumsan iaculis diam. <br> <br>
-
-										Morbi nisi lectus, tincidunt nec leo nec, egestas pulvinar sem. Nullam imperdiet blandit justo, lobortis aliquet sem lobortis sed. Cras pulvinar tincidunt dignissim. Aenean aliquet magna libero, in varius arcu vestibulum et. Vivamus vehicula feugiat mauris, ac sagittis est faucibus placerat. Donec vel facilisis diam, vitae cursus metus. Nullam volutpat, odio ac bibendum dapibus, nunc diam commodo lorem, id vehicula sem nisi at neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consequat nibh sed ex pharetra venenatis nec vel lectus. Vivamus quis erat vitae nunc suscipit rutrum ac vel nunc. Vestibulum aliquet, libero in posuere tempus, justo erat cursus sem, sit amet posuere dui diam facilisis massa. Nullam pretium lacus sed est placerat rhoncus. Donec finibus malesuada sollicitudin. Fusce arcu quam, blandit sed neque vel, consectetur sagittis ex. Phasellus dapibus pretium consectetur. Aenean augue velit, porta quis euismod quis, dictum nec ipsum. <br> <br>
-
-										Etiam pharetra euismod enim eu tempor. Curabitur egestas lorem et magna dapibus sollicitudin. Aenean mattis interdum consectetur. Phasellus aliquam nisl eu commodo porta. Aenean euismod nunc in libero hendrerit suscipit. Duis tempus ligula nisi, nec finibus ligula iaculis a. Curabitur id enim felis. Sed ligula enim, accumsan ac velit ac, condimentum rhoncus tortor.</p>
+                    					<img src="{{asset('uploads/images')}}/{{$view->photo_path}}" alt="">
+                    					<br> <br>  
+                    					<p>{!! $view->text !!}</p>
                 					</div>
                 		</div>
                         <br>
