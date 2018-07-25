@@ -21,7 +21,7 @@ Admin Page
                             {{ session('status') }}
                         </div>
                     @endif
-                      <h1>Selamat Datang!</h1>
+                      <h1>Selamat Datang {{ Auth::user()->name }}!</h1>
                   </div>
               </div>
           </div>

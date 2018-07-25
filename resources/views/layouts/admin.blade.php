@@ -72,26 +72,16 @@
                       </a>
           </li>
           <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>Input</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="{{url('admin/artikel/create')}}">Artikel</a></li>
-              <li><a class="" href="#">Kegiatan</a></li>
-            </ul>
+            <a href="{{url('admin/artikel/create')}}" class="">
+              <i class="icon_document_alt"></i>
+              <span>Input</span>
+            </a>
           </li>
           <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="icon_desktop"></i>
-                          <span>Daftar</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="{{url('admin/artikel')}}">Artikel</a></li>
-              <li><a class="" href="#">Kegiatan</a></li>
-            </ul>
+            <a href="{{url('admin/artikel')}}" class="">
+              <i class="icon_desktop"></i>
+              <span>Daftar</span>
+            </a>
           </li>
           <li>
                   <a href="{{ route('logout') }}"
