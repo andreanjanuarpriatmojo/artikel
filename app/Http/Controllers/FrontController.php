@@ -11,12 +11,12 @@ class FrontController extends Controller
     public function index()
     {
         $b = Blog::orderBy('updated_at', 'DESC')->get();
-        return view('artikel.front',compact('b'));
+        return view('artikel.index',compact('b'));
     }
 
     public function view($id){
-    	$view = Blog::where('id', $id)->first();
-    	// dd($view);
-    	return view('pengumuman-more', compact('view'));
+        $bg = Blog::orderBy('updated_at', 'DESC')->get();
+    	$blog = Blog::where('id', $id)->first();
+    	return view('artikel.artikel', compact('blog','bg'));
     }
 }
