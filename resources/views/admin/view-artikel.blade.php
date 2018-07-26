@@ -23,7 +23,7 @@ Admin Page
                           <img src="{{asset('uploads/images')}}/{{$b->photo_path}}" alt="{{$b->photo_path}}" style="height: 400px" class="img-responsive">
                           <br>
                           <p>
-                            {{$b->text}}
+                            {!! $b->text !!}
                           </p>
                         </div>
                       </div>
