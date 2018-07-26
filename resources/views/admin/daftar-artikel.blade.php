@@ -43,8 +43,8 @@ Admin Page
                                     {{$b->title}}
                                 </td>
                                 <td>{{ Auth::user()->name }}</td>
-                                <td>{{date('d-m-Y', strtotime($b->created_at))}}</td>
-                                <td>{{date('d-m-Y', strtotime($b->updated_at))}}</td>
+                                <td>{{$b->created_at}}</td>
+                                <td>{{$b->updated_at}}</td>
                                 <td>
                                   <a href="{{ url('admin/artikel',['id' => $b->id] )}}" type="button" class="btn btn-primary btn-block"> View
                                 </td>
