@@ -37,6 +37,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <!--End of col-md-4-->
                     <div class="col-md-4">
                         <div class="blog_news">
