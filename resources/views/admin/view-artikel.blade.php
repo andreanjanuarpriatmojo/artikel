@@ -14,7 +14,7 @@ Admin Page
           </div>
           <div class="col-lg-8">
               <div class="panel panel-default">
-                  <div class="panel-heading">{{$b->id}}</div>
+                  <div class="panel-heading"></div>
                   <div class="panel-body">
                       <div class="container">
                         <div style="text-align: justify;">
