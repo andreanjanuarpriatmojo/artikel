@@ -81,7 +81,7 @@
                                         <img src="{{asset('uploads/images')}}/{{$bg[3]->photo_path}}" alt="">
                                     </div>
                                     <div class="Kegiatan_news_text">
-                                       <a href="{{ url('bg',['id' => $bg[3]->id] )}}"><h4>{{$bg[3]->title}}</h4></a>
+                                       <a href="{{ url('blog',['id' => $bg[3]->id] )}}"><h4>{{$bg[3]->title}}</h4></a>
                                         <p>{{ strip_tags(str_limit($bg[3]->text, 50)) }}</p>
                                     </div>
                             	</div>
@@ -92,7 +92,7 @@
                                         <img src="{{asset('uploads/images')}}/{{$bg[4]->photo_path}}" alt="">
                                     </div>
                                     <div class="Kegiatan_news_text">
-                                       <a href="{{ url('bg',['id' => $bg[4]->id] )}}"><h4>{{$bg[4]->title}}</h4></a>
+                                       <a href="{{ url('blog',['id' => $bg[4]->id] )}}"><h4>{{$bg[4]->title}}</h4></a>
                                         <p>{{ strip_tags(str_limit($bg[4]->text, 50))    }}</p>
                                     </div>
                             	</div>
