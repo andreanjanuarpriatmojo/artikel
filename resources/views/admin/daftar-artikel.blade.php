@@ -42,7 +42,7 @@ Admin Page
                                 <td>
                                     {{$b->title}}
                                 </td>
-                                <td>{{ Auth::user()->name }}</td>
+                                <td>{{$b->username}}</td>
                                 <td>{{$b->created_at}}</td>
                                 <td>{{$b->updated_at}}</td>
                                 <td>

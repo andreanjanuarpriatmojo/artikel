@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Input;
 use App\Blog;
 use File;
 use Storage;
+use Auth;
 
 class BlogController extends Controller
 {
@@ -51,9 +52,11 @@ class BlogController extends Controller
     public function store(Request $request)
     {
 
+        
         $b = new Blog();
         $b->title = $request->title;
         $b->text = $request->text;
+        $b->username = Auth::user()->name;
 
         if ($request->file('img')){
             $image = $request->file('img');
@@ -63,6 +66,8 @@ class BlogController extends Controller
             $img->save(public_path('/uploads/images/'.$name));
             $b->photo_path = $name;
         }
+
+        
         //$b->save();
         if ($b->save()){
             return redirect()->route('artikel')->with('success', 'Berita telah diupload!');
@@ -97,6 +102,7 @@ class BlogController extends Controller
 
         $b->title = $request->title;
         $b->text = $request->text;
+        $b->username = Auth::user()->name;
 
         if ($request->hasFile('img')){
             $image = $request->file('img');
