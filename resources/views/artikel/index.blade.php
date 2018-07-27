@@ -19,7 +19,7 @@
                         <div class="blog_news">
                             <div class="single_blog_item">
                                 <div class="blog_img">
-                                    <img src="{{asset('uploads/images')}}/{{$b[0]->photo_path}}" alt="">
+                                    <img src="{{asset('uploads/images')}}/{{$bl->photo_path}}" alt="">
                                 </div>
                                 <div class="blog_content">
                                     <h3>{{ strip_tags(str_limit($bl->title, 50)) }}</h3>
@@ -33,7 +33,7 @@
                                     </div>
 
                                     <p class="blog_news_content">{{ strip_tags(str_limit($bl->text, 150)) }}</p>
-                                    <a href="{{ url('blog',['id' => $b[0]->id] )}}" class="blog_link">read more</a>
+                                    <a href="{{ url('blog',['id' => $bl->id] )}}" class="blog_link">read more</a>
                                 </div>
                             </div>
                         </div>
