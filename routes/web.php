@@ -24,6 +24,8 @@ Route::get('/admin/artikel/edit/{id}', 'BlogController@edit')->name('artikel.edi
 Route::put('/admin/artikel/{id}', 'BlogController@update')->name('artikel.update');
 Route::delete('/admin/artikel/{id}','BlogController@destroy')->name('artikel.destroy');
 Route::view('/admin','admin.index')->name('admin')->middleware('auth');
+
+Route::view('/edito', 'admin.editor')->name('admin')->middleware('auth');
 //Route::get('/front', 'FrontController@index');
 // Route::view('/login','admin.login');
 // Route::view('/register','admin.register');

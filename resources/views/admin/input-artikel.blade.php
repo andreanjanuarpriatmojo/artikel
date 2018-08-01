@@ -34,7 +34,20 @@ Admin Page
                               <div class="panel-heading">Text</div>
                               <div class="panel-body">
                                 <div class="form-group">
-                                  <textarea class="form-control" rows="10" name="text"></textarea>
+                                  <textarea class="form-control" rows="10" data-uk-htmleditor name="text"><h1>Heading</h1>
+                              
+                                    <p>Lorem ipsum dolor sit <strong>amet</strong>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="">This is a link</a></p>
+                                    
+                                    <ul>
+                                        <li>Item</li>
+                                        <li>Item</li>
+                                        <li>Item</li>
+                                    </ul>
+                                    
+                                    <h2>Heading</h2>
+                                    
+                                    <p>Ut enim ad <em>minim</em> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                  </textarea>
                                 </div>
                               </div>
                             </div>
