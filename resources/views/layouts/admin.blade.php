@@ -53,6 +53,8 @@
 
   <script src="{{url('editor/js/jquery-1.11.1.min.js')}}"></script>
 
+  <!--froala -->
+
 
 
 </head>
@@ -229,6 +231,8 @@
 
   <!-- JavaScripts initializations and stuff -->
   <script src="{{url('editor/js/xenon-custom.js')}}"></script>
+
+  <!--Froala -->
 
 
 

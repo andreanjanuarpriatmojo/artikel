@@ -11,6 +11,7 @@
                 		<div class="Kegiatan_news_text">
                 			<div class="card" style="border: 1px solid #d1d3d1;margin-top: 1em">
 							<div class="card-body">
+								<div class="content">
 								<div class="row">
 									<div class="col-md-4">
 									<img src="{{asset('uploads/images')}}/{{$cb->photo_path}}" alt="" style="height: 150px;width: 350px">
@@ -25,6 +26,7 @@
 										<p>{{ strip_tags(str_limit($cb->text, 50)) }}</p>
 										<a href="{{ url('blog',['id' => $cb->id] )}}" style="margin-top: 1em">read more</a>
 									</div>
+								</div>
 								</div>
 							</div>
 						</div>
