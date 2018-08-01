@@ -14,6 +14,13 @@ class FrontController extends Controller
         return view('artikel.index',compact('b'));
     }
 
+        public function view_all()
+    {
+        $c = Blog::orderBy('updated_at', 'DESC')->get();
+        return view('artikel.coba',compact('c'));
+    }
+
+
     public function view($id){
         $bg = Blog::orderBy('updated_at', 'DESC')->get();
     	$blog = Blog::where('id', $id)->first();
