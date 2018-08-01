@@ -42,14 +42,14 @@
   ======================================================= -->
 
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic">
-  <link rel="stylesheet" href="{{url('editor/css/fonts/linecons/css/linecons.css')}}">
+  <!--<link rel="stylesheet" href="{{url('editor/css/fonts/linecons/css/linecons.css')}}">
   <link rel="stylesheet" href="{{url('editor/css/fonts/fontawesome/css/font-awesome.min.css')}}">
   <link rel="stylesheet" href="{{url('editor/css/bootstrap.css')}}">
   <link rel="stylesheet" href="{{url('editor/css/xenon-core.css')}}">
   <link rel="stylesheet" href="{{url('editon/css/xenon-forms.css')}}">
   <link rel="stylesheet" href="{{url('editor/css/xenon-components.css')}}">
   <link rel="stylesheet" href="{{url('editor/css/xenon-skins.css')}}">
-  <link rel="stylesheet" href="{{url('editor/css/custom.css')}}">
+  <link rel="stylesheet" href="{{url('editor/css/custom.css')}}">-->
 
   <script src="{{url('editor/js/jquery-1.11.1.min.js')}}"></script>
 
