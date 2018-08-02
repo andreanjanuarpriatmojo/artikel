@@ -34,7 +34,7 @@ Admin Page
                               <div class="panel-heading">Text</div>
                               <div class="panel-body">
                                 <div class="form-group">
-                                  <textarea class="form-control" rows="10" data-uk-htmleditor name="text">
+                                  <textarea id="froala-editor" class="form-control" name="text">
                                   </textarea>
                                 </div>
                               </div>

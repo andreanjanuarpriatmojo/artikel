@@ -49,11 +49,26 @@
   <link rel="stylesheet" href="{{url('editon/css/xenon-forms.css')}}">
   <link rel="stylesheet" href="{{url('editor/css/xenon-components.css')}}">
   <link rel="stylesheet" href="{{url('editor/css/xenon-skins.css')}}">
-  <link rel="stylesheet" href="{{url('editor/css/custom.css')}}">-->
+  <link rel="stylesheet" href="{{url('editor/css/custom.css')}}">
 
-  <script src="{{url('editor/js/jquery-1.11.1.min.js')}}"></script>
+  <script src="{{url('editor/js/jquery-1.11.1.min.js')}}"></script>-->
 
   <!--froala -->
+  <link href="{{url('froala/css/froala_editor.css')}}" rel="stylesheet">
+  <link href="{{url('froala/css/froala_style.css')}}" rel="stylesheet">
+  <link href="{{url('froala/css/plugins/code_view.css')}}" rel="stylesheet">
+  <link href="{{url('froala/css/plugins/colors.css')}}" rel="stylesheet">
+  <link href="{{url('froala/css/plugins/emoticons.css')}}" rel="stylesheet">
+  <link href="{{url('froala/css/plugins/image_manager.css')}}" rel="stylesheet">
+  <link href="{{url('froala/css/plugins/image.css')}}" rel="stylesheet">
+  <link href="{{url('froala/css/plugins/line_breaker.css')}}" rel="stylesheet">
+  <link href="{{url('froala/css/plugins/table.css')}}" rel="stylesheet">
+  <link href="{{url('froala/css/plugins/file.css')}}" rel="stylesheet">
+  <link href="{{url('froala/css/plugins/char_counter.css')}}" rel="stylesheet">
+  <link href="{{url('froala/css/plugins/video.css')}}" rel="stylesheet">
+  <link href="{{url('froala/css/plugins/emoticons.css')}}" rel="stylesheet">
+  <link href="{{url('froala/css/plugins/fullscreen.css')}}" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css" rel="stylesheet">
 
 
 
@@ -214,25 +229,63 @@
 
 
 <!-- Imported styles on this page -->
-  <link rel="stylesheet" href="{{url('editor/js/wysihtml5/src/bootstrap-wysihtml5.css')}}">
+  <!--<link rel="stylesheet" href="{{url('editor/js/wysihtml5/src/bootstrap-wysihtml5.css')}}">
   <link rel="stylesheet" href="{{url('editor/js/uikit/vendor/codemirror/codemirror.css')}}">
   <link rel="stylesheet" href="{{url('editor/js/uikit/uikit.css')}}">
-  <link rel="stylesheet" href="{{url('editor/js/uikit/css/addons/uikit.almost-flat.addons.min.css')}}">
+  <link rel="stylesheet" href="{{url('editor/js/uikit/css/addons/uikit.almost-flat.addons.min.css')}}">-->
 
   <!-- Imported scripts on this page -->
-  <script src="{{url('editor/js/wysihtml5/src/bootstrap-wysihtml5.js')}}"></script>
+  <!--<script src="{{url('editor/js/wysihtml5/src/bootstrap-wysihtml5.js')}}"></script>
   <script src="{{url('editor/js/uikit/vendor/codemirror/codemirror.js')}}"></script>
   <script src="{{url('editor/js/uikit/vendor/marked.js')}}"></script>
   <script src="{{url('editor/js/uikit/js/uikit.min.js')}}"></script>
   <script src="{{url('editor/js/uikit/js/addons/htmleditor.min.js')}}"></script>
   <script src="{{url('editor/js/ckeditor/ckeditor.js')}}"></script>
-  <script src="{{url('editor/js/ckeditor/adapters/jquery.js')}}"></script>
+  <script src="{{url('editor/js/ckeditor/adapters/jquery.js')}}"></script>-->
 
 
   <!-- JavaScripts initializations and stuff -->
-  <script src="{{url('editor/js/xenon-custom.js')}}"></script>
+  <!--<script src="{{url('editor/js/xenon-custom.js')}}"></script>-->
 
   <!--Froala -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
+  <script type="text/javascript" src="{{url('froala/js/froala_editor.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/align.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/code_beautifier.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/code_view.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/colors.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/draggable.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/emoticons.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/font_size.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/font_family.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/image.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/image_manager.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/line_breaker.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/link.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/lists.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/paragraph_format.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/paragraph_style.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/video.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/table.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/url.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/emoticons.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/file.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/entities.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/char_counter.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/inline_style.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/save.min.js')}}"></script>
+  <script type="text/javascript" src="{{url('froala/js/plugins/fullscreen.min.js')}}"></script>
+
+ <script>
+  $(function() {
+    $('textarea#froala-editor').froalaEditor()
+  });
+</script>
+
+
+
 
 
 
