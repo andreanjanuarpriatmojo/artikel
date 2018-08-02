@@ -18,19 +18,20 @@
                     </div>
                     <div class="col-md-6 zero_mp">
                         <div class="Kegiatan_item">
-                            <div class="Kegiatan_text text-center">
+                            <div class="Kegiatan_text text-left">
                                 <h4>{{$cb->title}}</h4></a>
                                 <p>
                                     <span class="clock"><i class="fa fa-clock-o"></i></span>
                                     <span class="time">{{date('d-m-Y', strtotime($cb->updated_at))}}</span>
                                 </p>
+                                <p>{{ strip_tags(str_limit($cb->text, 80)) }}</p>
                                 <br>
-                                    <p>{{ strip_tags(str_limit($cb->text, 50)) }}</p>
                                 <a href="{{ url('blog',['id' => $cb->id] )}}" class="Kegiatan_btn">read more</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <br>
                 @endforeach
             </div>
             <!--End of col-md-8-->
@@ -46,7 +47,7 @@
                             </div>
                             <div class="Kegiatan_news_text">
                                 <a href="{{ url('blog',['id' => $cb->id] )}}"><h4>{{$cb->title}}</h4></a>
-                                <p>{{ strip_tags(str_limit($cb->text, 50)) }}</p>
+                                <p>{{ strip_tags(str_limit($cb->text, 30)) }}</p>
                             </div>
                         </div>
                     </div>

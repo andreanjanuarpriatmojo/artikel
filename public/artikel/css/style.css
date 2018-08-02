@@ -292,8 +292,8 @@ input: -webkit-autofill:focus {
 }
 #Kegiatan .Kegiatan_text {
     padding: 30px 30px 0;
-    background: #eff0f2;
-    min-height: 279px;
+    background: #ffffff;
+    min-height: 200px;
 }
 #Kegiatan .Kegiatan_item img {
     width: 100%;
@@ -303,11 +303,10 @@ input: -webkit-autofill:focus {
     width: 100%;
 }
 #Kegiatan .Kegiatan_text h4 {
-    font-size: 18px;
-    padding-bottom: 15px;
-    font-weight: 700;
     color: #454444;
+    font-size: 18px;
     font-family: 'Roboto Slab', serif;
+    font-weight: 700;
 }
 #Kegiatan .Kegiatan_text h6 {
     padding-bottom: 20px;
@@ -316,9 +315,9 @@ input: -webkit-autofill:focus {
     font-family: 'Roboto Slab', serif;
 }
 #Kegiatan .Kegiatan_text p {
+    padding-top: 10px;
     font-size: 14px;
     color: #646464;
-    padding-bottom: 35px;
     font-family: 'Open Sans', sans-serif;
 }
 #Kegiatan a.Kegiatan_btn {
@@ -352,6 +351,9 @@ input: -webkit-autofill:focus {
     font-size: 14px;
     color: #646464;
     font-family: 'Open Sans', sans-serif;
+}
+#Kegiatan .Kegiatan_img {
+    padding-right: 10px;
 }
 #Kegiatan .Kegiatan_news_img {
     padding-right: 10px;
@@ -494,12 +496,16 @@ input: -webkit-autofill:focus {
 }
 
 .Kegiatan_img img {
-    width: 440px;
-    height: 279px;
+    width: 300px;
+    height: 200px;
+}
+.Kegiatan_img_artikel img {
+    width: 600px;
+    height: 300px;
 }
 .Kegiatan_news_img img {
-    width: 95px;
-    height: 90px;
+    width: 90px;
+    height: 60px;
 }
 
 #market-place .fw-single-image img {

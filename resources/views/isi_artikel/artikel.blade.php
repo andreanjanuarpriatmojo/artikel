@@ -21,81 +21,26 @@
                 		</div>
                 </div>
                 <br>
-                <div class="col-md-6 zero_mp">
-                    <div class="Kegiatan_item">
-                        <div class="Kegiatan_text text-left">
-                            <a href="{{url('isi')}}"><h6>Oldest Post</h6></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 zero_mp">
-                    <div class="Kegiatan_item">
-                        <div class="Kegiatan_text text-right">
-                            <a href="{{url('isi')}}"><h6>Newest Post</h6></a>
-                        </div>
-                    </div>
-                </div>
+                <a href="{{ url('blog',['id' => $cb->id] )}}" class="Kegiatan_btn">Oldest post</a>
             </div>
             <!--End of col-md-8-->
             <div class="col-md-4">
                 <div class="Kegiatan_news_text">
                     <h4>Artikel Terbaru</h4>
                     <br>
-                        <div class="Kegiatan_news">
-                            <div class="Kegiatan_single_item fix">
-                                <div class="Kegiatan_news_img floatleft">
-                                    <img src="{{url('artikel/img/tree_cut_3.jpg')}}" alt="">
-                                </div>
-                                <div class="Kegiatan_news_text">
-                                    <a href="{{url('isi')}}"><h4>Let’s plant 200 tree each...</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veniam.</p>
-                                </div>
+                    @foreach ($c as $cb)
+                    <div class="Kegiatan_news">
+                        <div class="Kegiatan_single_item fix">
+                            <div class="Kegiatan_news_img floatleft">
+                                <img src="{{asset('uploads/images')}}/{{$cb->photo_path}}" alt="">
+                            </div>
+                            <div class="Kegiatan_news_text">
+                                <a href="{{ url('blog',['id' => $cb->id] )}}"><h4>{{$cb->title}}</h4></a>
+                                <p>{{ strip_tags(str_limit($cb->text, 50)) }}</p>
                             </div>
                         </div>
-                        <div class="Kegiatan_news">
-                            <div class="Kegiatan_single_item fix">
-                                <div class="Kegiatan_news_img floatleft">
-                                    <img src="{{url('artikel/img/tree_cut_4.jpg')}}" alt="">
-                                </div>
-                                <div class="Kegiatan_news_text">
-                                    <a href="{{url('isi')}}"><h4>Keep your house envirome..</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veniam.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Kegiatan_news">
-                            <div class="Kegiatan_single_item fix">
-                                <div class="Kegiatan_news_img floatleft">
-                                    <img src="{{url('artikel/img/tree_cut_3.jpg')}}" alt="">
-                                </div>
-                                <div class="Kegiatan_news_text">
-                                    <a href="{{url('isi')}}"><h4>Urgent Clothe Needed Needed</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veniam.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Kegiatan_news">
-                            <div class="Kegiatan_single_item fix">
-                                <div class="Kegiatan_news_img floatleft">
-                                    <img src="{{url('artikel/img/tree_cut_4.jpg')}}" alt="">
-                                </div>
-                                <div class="Kegiatan_news_text">
-                                    <a href="{{url('isi')}}"><h4>One Tree Thousand Hope</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veniam.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Kegiatan_news">
-                            <div class="Kegiatan_single_item fix">
-                                <div class="Kegiatan_news_img floatleft">
-                                    <img src="{{url('artikel/img/tree_cut_3.jpg')}}" alt="">
-                                </div>
-                                <div class="Kegiatan_news_text">
-                                    <a href="{{url('isi')}}"><h4>One Tree Thousand Hope</h4></a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veniam.</p>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                    @endforeach
                 </div>
             </div>
             <!--End of col-md-4-->

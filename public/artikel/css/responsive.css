@@ -5,28 +5,6 @@
     #header .top_header .phone p {
         font-size: 11px;
     }
-    #slider .slider_text h3 {
-        font-size: 30px;
-    }
-    #slider .slider_text h2 {
-        font-size: 40px;
-    }
-    #slider .slider_text p {
-        font-size: 16px;
-        padding-bottom: 45px;
-    }
-    #slider .slider_text a.custom_btn {
-        font-size: 13px;
-    }
-    #slider .slider_text {
-        padding-bottom: 10%;
-    }
-    #slider {
-        min-height: 350px;
-    }
-    #welcome .welcome_icon i {
-        font-size: 45px;
-    }
     #Kegiatan .Kegiatan_item {
         width: 50%;
         float: left;
@@ -35,13 +13,6 @@
         padding-top: 30px;
         width: 50%;
     }
-    .testimonial_content {
-        padding: 20px 20px;
-        height: 140px;
-    }
-    .testimonial_content i {
-        top: 55px;
-    }
     .carousel-indicators {
         bottom: 0px;
     }
@@ -49,15 +20,6 @@
         width: 60%;
         margin: 0 auto;
         margin-bottom: 20px;
-    }
-    #purches a.purches_btn {
-        margin-top: -40px;
-    }
-    #market-place .fw-single-image img {
-        height: 50%;
-    }
-    #market-place .fw-single-image {
-        padding: 80px 15px;
     }
 }
 /* CHANGING BREAKPOINT OF BOOTSTRAP 3 NAVIGATION BAR*/
@@ -171,60 +133,6 @@
         font-family: 'Roboto Slab', serif !important;
         color: #222222;
     }
-    #welcome {
-        padding-bottom: 20px;
-        min-height: 245px;
-    }
-    #welcome .wel_header {
-        padding-top: 20px;
-    }
-    .wel_header p {
-        font-size: 13px;
-    }
-    #welcome .single_item {
-        padding-top: 20px;
-        float: left;
-        width: 100%;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    #welcome .welcome_icon {
-        width: 50px;
-        height: 50px;
-    }
-    #welcome .welcome_icon i {
-        font-size: 20px;
-        line-height: 50px;
-        margin-top: 0;
-    }
-    #welcome .item_list h4 {
-        font-size: 12px;
-    }
-    #welcome .item_list p {
-        font-size: 11px;
-    }
-    #portfolio {
-        padding-bottom: 20px;
-    }
-    #portfolio .portfolio_title {
-        padding-top: 20px;
-    }
-    #portfolio .portfolio_title h2 {
-        font-size: 20px;
-    }
-    #portfolio .portfolio_title p {
-        font-size: 11px;
-    }
-    #portfolio ul.portfolio_custom_menu li button {
-        margin-bottom: 0px;
-        margin-right: 5px;
-        width: 90px;
-        font-size: 9px;
-        padding-left: 12px;
-    }
-    #portfolio .notes .note .img_overlay p {
-        font-size: 11px;
-    }
     #counter {
         padding-bottom: 20px;
     }
@@ -302,41 +210,6 @@
         padding-top: 5px;
         font-size: 10px;
     }
-    #testimonial .testimonial_header {
-        padding-top: 20px;
-    }
-    #testimonial .testimonial_header h2 {
-        font-size: 20px;
-        padding-bottom: 10px;
-    }
-    #testimonial .testimonial_header p {
-        font-size: 11px;
-    }
-    #testimonial #fade-quote-carousel .profile-circle {
-        width: 50px;
-        height: 75px;
-    }
-    #testimonial .testimonial_content p {
-        font-size: 11px;
-        padding-left: 20px;
-        padding-right: 0px;
-        padding-bottom: 20px;
-    }
-    #testimonial .testimonial_content i {
-        font-size: 15px;
-    }
-    #testimonial .testimonial_author h5 {
-        font-size: 12px;
-        padding-bottom: 3px;
-    }
-    #testimonial .testimonial_author p {
-        font-size: 11px;
-    }
-    #testimonial #fade-quote-carousel.carousel .carousel-indicators > li {
-        border: 1px solid;
-        width: 8px;
-        height: 8px;
-    }
     #blog .single_blog_item {
         margin: 8px 0;
     }
@@ -378,52 +251,6 @@
     #blog a.blog_link {
         font-size: 11px;
     }
-    #purches {
-        min-height: 100px;
-        background: #333333;
-        padding: 60px 0;
-    }
-    #purches h2.purches_title {
-        font-size: 20px;
-        padding-top: 0px;
-    }
-    #purches a.purches_btn {
-        margin-top: -25px;
-        padding: 7px 40px;
-        border-radius: 2px;
-        font-size: 12px;
-    }
-    #market .market_area {
-        padding-top: 20px;
-    }
-    #market .market_logo {
-        margin: 20px 0;
-    }
-    #contact .contact_area {
-        padding-top: 20px;
-    }
-    #contact .contact_area h3 {
-        font-size: 20px;
-    }
-    #contact .contact_area p {
-        font-size: 11px;
-    }
-    #contact .office {
-        padding-top: 30px;
-    }
-    #contact .office .title h5 {
-        font-size: 15px;
-    }
-    #contact .office_location i span {
-        font-size: 11px;
-    }
-    #contact .msg_title h5 {
-        font-size: 14px;
-    }
-    #contact .custom-btn {
-        padding: 11px 98px;
-        font-size: 10px;
-    }
     #footer {
         min-height: 80px;
     }
@@ -437,13 +264,6 @@
     #footer .copyright,
     #footer .designer {
         padding-top: 30px;
-    }
-    #back-to-top {
-        width: 25px;
-        height: 25px;
-        line-height: 23px;
-        bottom: 5px;
-        right: 5px;
     }
 }
 @media all and (max-width: 767px) {
@@ -520,28 +340,6 @@
     .wel_header {
         padding-bottom: 0px;
     }
-    #portfolio {
-        padding-bottom: 20px;
-    }
-    #portfolio .portfolio_title {
-        padding-top: 20px;
-    }
-    #portfolio .portfolio_title h2 {
-        font-size: 20px;
-    }
-    #portfolio .portfolio_title p {
-        font-size: 11px;
-    }
-    #portfolio ul.portfolio_custom_menu li button {
-        margin-bottom: 0px;
-        margin-right: 5px;
-        width: 90px;
-        font-size: 9px;
-        padding-left: 12px;
-    }
-    #portfolio .notes .note .img_overlay p {
-        font-size: 11px;
-    }
     #counter {
         padding-bottom: 20px;
     }
@@ -612,54 +410,11 @@
         padding-top: 5px;
         font-size: 10px;
     }
-    #testimonial .testimonial_header {
-        padding-top: 20px;
-    }
-    #testimonial .testimonial_header h2 {
-        font-size: 20px;
-        padding-bottom: 10px;
-    }
-    #testimonial .testimonial_header p {
-        font-size: 11px;
-    }
-    #testimonial #fade-quote-carousel .profile-circle {
-        width: 50px;
-        height: 75px;
-    }
-    .testimonial_content {
-        height: 150px;
-        width: 100%;
-        margin: 0 auto;
-    }
     .profile-circle img {
         height: 70px;
     }
     .profile-circle {
         top: 60px;
-    }
-    .testimonial_author {
-        padding: 25px 0;
-    }
-    #testimonial .testimonial_content p {
-        font-size: 11px;
-        padding-left: 20px;
-        padding-right: 0px;
-        padding-bottom: 20px;
-    }
-    #testimonial .testimonial_content i {
-        font-size: 15px;
-    }
-    #testimonial .testimonial_author h5 {
-        font-size: 12px;
-        padding-bottom: 3px;
-    }
-    #testimonial .testimonial_author p {
-        font-size: 11px;
-    }
-    #testimonial #fade-quote-carousel.carousel .carousel-indicators > li {
-        border: 1px solid;
-        width: 8px;
-        height: 8px;
     }
     #blog .single_blog_item {
         margin: 8px 0;
@@ -702,50 +457,6 @@
     #blog a.blog_link {
         font-size: 11px;
     }
-    #purches h2.purches_title {
-        font-size: 20px;
-        padding-top:0px;
-    }
-    #purches a.purches_btn {
-        margin-top: -30px;
-        padding: 7px 40px;
-        border-radius: 2px;
-        font-size: 12px;
-    }
-    #market-place .fw-single-image {
-        padding: 5px 15px;
-    }
-    #market .market_area {
-        padding-top: 20px;
-    }
-    #market .market_logo {
-        margin: 20px 0;
-    }
-    #contact .contact_area {
-        padding-top: 20px;
-    }
-    #contact .contact_area h3 {
-        font-size: 20px;
-    }
-    #contact .contact_area p {
-        font-size: 11px;
-    }
-    #contact .office {
-        padding-top: 30px;
-    }
-    #contact .office .title h5 {
-        font-size: 15px;
-    }
-    #contact .office_location i span {
-        font-size: 11px;
-    }
-    #contact .msg_title h5 {
-        font-size: 14px;
-    }
-    #contact .custom-btn {
-        padding: 11px 98px;
-        font-size: 10px;
-    }
     #footer {
         min-height: 80px;
     }
@@ -760,44 +471,8 @@
     #footer .designer {
         padding-top: 18px;
     }
-    #back-to-top {
-        width: 25px;
-        height: 25px;
-        line-height: 23px;
-        bottom: 5px;
-        right: 5px;
-    }
-}
-@media all and (max-width: 640px){
-    #slider .slider_text h2 {
-        font-size: 18px;
-        padding: 5px 0;
-    }
-    #slider .slider_text h3 {
-        font-size: 12px;
-    }
-    #slider .slider_text {
-        padding-bottom: 0;
-    }
-    #slider .slider_text p {
-        padding-bottom: 5px;
-        font-size: 10px;
-    }
-    #slider .carousel-caption {
-        bottom: 15%;
-    }
-    #slider .slider_text a.custom_btn {
-        font-size: 10px;
-    }
-    .carousel-indicators li {
-        top: 60px;
-    }
 }
 @media all and (max-width: 480px) {
-
-
-
-
     #header .header_menu .custom_navbar-brand {
         padding-top: 8px;
     }
@@ -833,92 +508,11 @@
     #header .header_menu .navbar-collapse.in {
         overflow-y: visible;
     }
-    #slider .slider_text h2 {
-        font-size: 18px;
-        padding: 2px 0;
-    }
-    #slider .slider_text h3 {
-        font-size: 12px;
-    }
-    #slider .slider_text {
-        padding-bottom: 0;
-    }
-    #slider .slider_text p {
-        padding-bottom: 5px;
-        font-size: 10px;
-    }
-    #slider .carousel-caption {
-        bottom: 0%;
-    }
-    #slider .slider_text a.custom_btn {
-        font-size: 10px;
-    }
     .carousel-indicators li {
         top: 60px;
     }
-    #welcome {
-        padding-bottom: 20px;
-        min-height: 150px;
-    }
-    #welcome .wel_header {
-        padding-top: 20px;
-    }
-    #welcome .wel_header h2 {
-        font-size: 16px;
-        padding-bottom: 10px;
-    }
-    #welcome .wel_header p {
-        font-size: 11px;
-    }
-    #welcome .single_item {
-        padding-top: 20px;
-        float: left;
-        width: 100%;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    #welcome .welcome_icon {
-        width: 50px;
-        height: 50px;
-    }
-    #welcome .welcome_icon i {
-        font-size: 20px;
-        line-height: 50px;
-        margin-top: 0;
-    }
-    #welcome .item_list h4 {
-        font-size: 12px;
-    }
-    #welcome .item_list p {
-        font-size: 11px;
-    }
     div#project {
         padding: 30px 0px;
-    }
-    #portfolio {
-        padding-bottom: 20px;
-    }
-    #portfolio .portfolio_title {
-        padding-top: 20px;
-    }
-    #portfolio .portfolio_title h2 {
-        font-size: 20px;
-    }
-    #portfolio .portfolio_title p {
-        font-size: 11px;
-    }
-    #portfolio ul.portfolio_custom_menu li button {
-        margin-bottom: 0px;
-        margin-right: 5px;
-        width: 90px;
-        font-size: 9px;
-        padding-left: 12px;
-    }
-    #portfolio .notes .note .img_overlay p {
-        font-size: 11px;
-    }
-    .achivment_padding {
-        padding: 30px 0;
     }
     #counter {
         padding-bottom: 20px;
@@ -997,41 +591,6 @@
         padding-top: 5px;
         font-size: 10px;
     }
-    #testimonial .testimonial_header {
-        padding-top: 20px;
-    }
-    #testimonial .testimonial_header h2 {
-        font-size: 20px;
-        padding-bottom: 10px;
-    }
-    #testimonial .testimonial_header p {
-        font-size: 11px;
-    }
-    #testimonial #fade-quote-carousel .profile-circle {
-        width: 50px;
-        height: 75px;
-    }
-    #testimonial .testimonial_content p {
-        font-size: 11px;
-        padding-left: 20px;
-        padding-right: 0px;
-        padding-bottom: 20px;
-    }
-    #testimonial .testimonial_content i {
-        font-size: 15px;
-    }
-    #testimonial .testimonial_author h5 {
-        font-size: 12px;
-        padding-bottom: 3px;
-    }
-    #testimonial .testimonial_author p {
-        font-size: 11px;
-    }
-    #testimonial #fade-quote-carousel.carousel .carousel-indicators > li {
-        border: 1px solid;
-        width: 8px;
-        height: 8px;
-    }
     #blog .single_blog_item {
         margin: 8px 0;
     }
@@ -1073,47 +632,6 @@
     #blog a.blog_link {
         font-size: 11px;
     }
-    #purches h2.purches_title {
-        font-size: 20px;
-        padding-top: 35px;
-    }
-    #purches a.purches_btn {
-        margin-top: 60px;
-        padding: 7px 40px;
-        border-radius: 2px;
-        font-size: 12px;
-    }
-    #market .market_area {
-        padding-top: 20px;
-    }
-    #market .market_logo {
-        margin: 20px 0;
-    }
-    #contact .contact_area {
-        padding-top: 20px;
-    }
-    #contact .contact_area h3 {
-        font-size: 20px;
-    }
-    #contact .contact_area p {
-        font-size: 11px;
-    }
-    #contact .office {
-        padding-top: 30px;
-    }
-    #contact .office .title h5 {
-        font-size: 15px;
-    }
-    #contact .office_location i span {
-        font-size: 11px;
-    }
-    #contact .msg_title h5 {
-        font-size: 14px;
-    }
-    #contact .custom-btn {
-        padding: 11px 98px;
-        font-size: 10px;
-    }
     #footer {
         min-height: 80px;
     }
@@ -1127,13 +645,6 @@
     #footer .copyright,
     #footer .designer {
         padding-top: 18px;
-    }
-    #back-to-top {
-        width: 25px;
-        height: 25px;
-        line-height: 23px;
-        bottom: 5px;
-        right: 5px;
     }
 }
 @media all and (max-width: 320px) {
@@ -1197,102 +708,8 @@
     #header .header_menu .navbar-collapse.in {
         overflow-y: visible;
     }
-    #slider {
-        min-height: 95px;
-    }
-    #slider .carousel-indicators {
-        bottom: 25px;
-    }
-    #slider .carousel-indicators li {
-        width: 5px;
-        height: 5px;
-        margin-right: 1px;
-    }
-    #slider .carousel-indicators .active {
-        width: 5px;
-        height: 5px;
-        margin: 0px;
-        margin-right: 1px;
-    }
-    #slider .carousel-caption {
-        bottom: -15px;
-    }
-    #slider .slider_text a.custom_btn {
-        font-size: 10px;
-        padding: 2px 8px 4px;
-    }
-    #slider .slider_text {
-        padding-bottom: 10px;
-    }
-    #slider .slider_text p {
-        font-size: 8px;
-        padding-bottom: 2px;
-    }
-    #slider .slider_text h2 {
-        font-size: 13px;
-        padding: 2px 0;
-    }
-    #slider .slider_text h3 {
-        font-size: 11px;
-    }
-    #welcome {
-        min-height: 185px;
-    }
-    #welcome .wel_header {
-        padding-top: 20px;
-    }
-    .wel_header h2 {
-        font-size: 16px;
-        padding-bottom: 10px;
-    }
-    .wel_header p {
-        font-size: 12px;
-    }
-    #welcome .single_item {
-        padding-top: 0px;
-    }
-    #welcome .welcome_icon {
-        width: 50px;
-        height: 50px;
-    }
-    #welcome .welcome_icon i {
-        font-size: 20px;
-        line-height: 50px;
-        margin-top: 0;
-    }
-    #welcome .item_list h4 {
-        font-size: 12px;
-    }
-    #welcome .item_list p {
-        font-size: 11px;
-    }
     div#project {
         padding: 25px 0px;
-    }
-    #portfolio {
-        padding-bottom: 20px;
-    }
-    #portfolio .portfolio_title {
-        padding-top: 20px;
-    }
-    #portfolio .portfolio_title h2 {
-        font-size: 20px;
-    }
-    #portfolio .portfolio_title p {
-        font-size: 11px;
-    }
-    #portfolio ul.portfolio_custom_menu li button {
-        margin-bottom: 0px;
-        margin-right: 5px;
-        width: 90px;
-        font-size: 9px;
-        padding-left: 12px;
-    }
-    #portfolio .notes .note .img_overlay p {
-        font-size: 11px;
-    }
-    .achivment_padding {
-        padding: 25px 0;
     }
     #counter {
         padding-bottom: 20px;
@@ -1372,44 +789,6 @@
         padding-top: 5px;
         font-size: 10px;
     }
-    #testimonial {
-        padding: 25px 0px;
-    }
-    #testimonial .testimonial_header {
-        padding-top: 20px;
-    }
-    #testimonial .testimonial_header h2 {
-        font-size: 20px;
-        padding-bottom: 10px;
-    }
-    #testimonial .testimonial_header p {
-        font-size: 11px;
-    }
-    #testimonial #fade-quote-carousel .profile-circle {
-        width: 50px;
-        height: 75px;
-    }
-    #testimonial .testimonial_content p {
-        font-size: 11px;
-        padding-left: 20px;
-        padding-right: 0px;
-        padding-bottom: 20px;
-    }
-    #testimonial .testimonial_content i {
-        font-size: 15px;
-    }
-    #testimonial .testimonial_author h5 {
-        font-size: 12px;
-        padding-bottom: 3px;
-    }
-    #testimonial .testimonial_author p {
-        font-size: 11px;
-    }
-    #testimonial #fade-quote-carousel.carousel .carousel-indicators > li {
-        border: 1px solid;
-        width: 8px;
-        height: 8px;
-    }
     .carousel-indicators li {
         top: 35px;
     }
@@ -1458,53 +837,6 @@
     #blog a.blog_link {
         font-size: 11px;
     }
-    #purches h2.purches_title {
-        font-size: 20px;
-        padding-top: 35px;
-    }
-    #purches a.purches_btn {
-        margin-top: 60px;
-        padding: 7px 40px;
-        border-radius: 2px;
-        font-size: 12px;
-    }
-    #market .market_area {
-        padding-top: 20px;
-    }
-    #market .market_logo {
-        margin: 20px 0;
-    }
-    .contact_us_padding {
-        padding: 25px 0px;
-    }
-    #contact-us h3 {
-        font-size: 20px;
-    }
-    #contact .contact_area {
-        padding-top: 20px;
-    }
-    #contact .contact_area h3 {
-        font-size: 20px;
-    }
-    #contact .contact_area p {
-        font-size: 11px;
-    }
-    #contact .office {
-        padding-top: 30px;
-    }
-    #contact .office .title h5 {
-        font-size: 15px;
-    }
-    #contact .office_location i span {
-        font-size: 11px;
-    }
-    #contact .msg_title h5 {
-        font-size: 14px;
-    }
-    #contact .custom-btn {
-        padding: 11px 98px;
-        font-size: 10px;
-    }
     #footer {
         min-height: 80px;
     }
@@ -1519,12 +851,4 @@
     #footer .designer {
         padding-top: 18px;
     }
-    #back-to-top {
-        width: 25px;
-        height: 25px;
-        line-height: 23px;
-        bottom: 5px;
-        right: 5px;
-    }
 }
-
