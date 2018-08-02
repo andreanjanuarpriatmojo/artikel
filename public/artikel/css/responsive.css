@@ -163,42 +163,6 @@
     #header .header_menu .navbar-collapse.in {
         overflow-y: visible;
     }
-    #slider {
-        min-height: 95px;
-    }
-    #slider .carousel-indicators {
-        bottom: 90px;
-    }
-    #slider .carousel-indicators li {
-        width: 10px;
-        height: 10px;
-    }
-    #slider .carousel-indicators .active {
-        width: 10px;
-        height: 10px;
-        margin: 1px;
-    }
-    #slider .carousel-caption {
-        bottom: 50px;
-    }
-    #slider .slider_text a.custom_btn {
-        font-size: 12px;
-        padding: 5px 10px 7px;
-    }
-    #slider .slider_text {
-        padding-bottom: 25px;
-    }
-    #slider .slider_text p {
-        font-size: 12px;
-        padding-bottom: 45px;
-    }
-    #slider .slider_text h2 {
-        font-size: 22px;
-        padding: 10px 0;
-    }
-    #slider .slider_text h3 {
-        font-size: 18px;
-    }
     .wel_header h2 {
         font-size: 25px;
         text-transform: uppercase;
@@ -238,21 +202,6 @@
     }
     #welcome .item_list p {
         font-size: 11px;
-    }
-    #volunteer {
-        min-height: 260px;
-    }
-    #volunteer .vol_area {
-        padding-top: 60px;
-    }
-    #volunteer .volunteer_content h3 {
-        font-size: 20px;
-    }
-    #volunteer .volunteer_content p {
-        font-size: 11px;
-    }
-    #volunteer .join_us a.vol_cust_btn {
-        font-size: 10px;
     }
     #portfolio {
         padding-bottom: 20px;
@@ -565,97 +514,11 @@
     #header .header_menu .navbar-collapse.in {
         overflow-y: visible;
     }
-    #slider {
-        min-height: 95px;
-    }
-    #slider .carousel-indicators {
-        bottom: 50px;
-    }
-    #slider .carousel-indicators li {
-        width: 10px;
-        height: 10px;
-
-        margin: 0 3px;
-    }
-    #slider .carousel-indicators .active {
-        width: 10px;
-        height: 10px;
-        margin: 0 3px;
-    }
-    #slider .carousel-caption {
-        bottom: 35px;
-    }
-    #slider .slider_text a.custom_btn {
-        font-size: 12px;
-        padding: 5px 10px 7px;
-    }
-    #slider .slider_text {
-        padding-bottom: 25px;
-    }
-    #slider .slider_text p {
-        font-size: 12px;
-        padding-bottom: 25px;
-    }
-    #slider .slider_text h2 {
-        font-size: 22px;
-        padding: 10px 0;
-    }
-    #slider .slider_text h3 {
-        font-size: 18px;
-    }
     div#service {
         padding: 40px 0px;
     }
     .wel_header {
         padding-bottom: 0px;
-    }
-    #welcome {
-        padding-bottom: 20px;
-        min-height: 120px;
-    }
-    #welcome .wel_header {
-        padding-top: 20px;
-    }
-    #welcome .wel_header h2 {
-        font-size: 16px;
-        padding-bottom: 10px;
-    }
-    #welcome .wel_header p {
-        font-size: 11px;
-    }
-    #welcome .single_item {
-        padding-top: 0;
-        float: left;
-        width: 100%;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    #welcome .welcome_icon {
-        width: 50px;
-        height: 50px;
-    }
-    #welcome .welcome_icon i {
-        font-size: 20px;
-        line-height: 50px;
-        margin-top: 0;
-    }
-    #welcome .item_list h4 {
-        font-size: 12px;
-    }
-    #welcome .item_list p {
-        font-size: 11px;
-    }
-    #volunteer .vol_area {
-        padding-top: 60px;
-    }
-    #volunteer .volunteer_content h3 {
-        font-size: 20px;
-    }
-    #volunteer .volunteer_content p {
-        font-size: 11px;
-    }
-    #volunteer .join_us a.vol_cust_btn {
-        font-size: 10px;
     }
     #portfolio {
         padding-bottom: 20px;
@@ -1028,18 +891,6 @@
     }
     #welcome .item_list p {
         font-size: 11px;
-    }
-    #volunteer .vol_area {
-        padding-top: 60px;
-    }
-    #volunteer .volunteer_content h3 {
-        font-size: 20px;
-    }
-    #volunteer .volunteer_content p {
-        font-size: 11px;
-    }
-    #volunteer .join_us a.vol_cust_btn {
-        font-size: 10px;
     }
     div#project {
         padding: 30px 0px;
@@ -1414,18 +1265,6 @@
     }
     #welcome .item_list p {
         font-size: 11px;
-    }
-    #volunteer .vol_area {
-        padding-top: 60px;
-    }
-    #volunteer .volunteer_content h3 {
-        font-size: 20px;
-    }
-    #volunteer .volunteer_content p {
-        font-size: 11px;
-    }
-    #volunteer .join_us a.vol_cust_btn {
-        font-size: 10px;
     }
     div#project {
         padding: 25px 0px;
