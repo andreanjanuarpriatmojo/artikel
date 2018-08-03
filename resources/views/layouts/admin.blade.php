@@ -42,16 +42,6 @@
   ======================================================= -->
 
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic">
-  <!--<link rel="stylesheet" href="{{url('editor/css/fonts/linecons/css/linecons.css')}}">
-  <link rel="stylesheet" href="{{url('editor/css/fonts/fontawesome/css/font-awesome.min.css')}}">
-  <link rel="stylesheet" href="{{url('editor/css/bootstrap.css')}}">
-  <link rel="stylesheet" href="{{url('editor/css/xenon-core.css')}}">
-  <link rel="stylesheet" href="{{url('editon/css/xenon-forms.css')}}">
-  <link rel="stylesheet" href="{{url('editor/css/xenon-components.css')}}">
-  <link rel="stylesheet" href="{{url('editor/css/xenon-skins.css')}}">
-  <link rel="stylesheet" href="{{url('editor/css/custom.css')}}">
-
-  <script src="{{url('editor/js/jquery-1.11.1.min.js')}}"></script>-->
 
   <!--froala -->
   <link href="{{url('froala/css/froala_editor.css')}}" rel="stylesheet">
@@ -227,26 +217,6 @@
       });
     </script>
 
-
-<!-- Imported styles on this page -->
-  <!--<link rel="stylesheet" href="{{url('editor/js/wysihtml5/src/bootstrap-wysihtml5.css')}}">
-  <link rel="stylesheet" href="{{url('editor/js/uikit/vendor/codemirror/codemirror.css')}}">
-  <link rel="stylesheet" href="{{url('editor/js/uikit/uikit.css')}}">
-  <link rel="stylesheet" href="{{url('editor/js/uikit/css/addons/uikit.almost-flat.addons.min.css')}}">-->
-
-  <!-- Imported scripts on this page -->
-  <!--<script src="{{url('editor/js/wysihtml5/src/bootstrap-wysihtml5.js')}}"></script>
-  <script src="{{url('editor/js/uikit/vendor/codemirror/codemirror.js')}}"></script>
-  <script src="{{url('editor/js/uikit/vendor/marked.js')}}"></script>
-  <script src="{{url('editor/js/uikit/js/uikit.min.js')}}"></script>
-  <script src="{{url('editor/js/uikit/js/addons/htmleditor.min.js')}}"></script>
-  <script src="{{url('editor/js/ckeditor/ckeditor.js')}}"></script>
-  <script src="{{url('editor/js/ckeditor/adapters/jquery.js')}}"></script>-->
-
-
-  <!-- JavaScripts initializations and stuff -->
-  <!--<script src="{{url('editor/js/xenon-custom.js')}}"></script>-->
-
   <!--Froala -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
@@ -283,10 +253,6 @@
     $('textarea#froala-editor').froalaEditor()
   });
 </script>
-
-
-
-
 
 
 </body>

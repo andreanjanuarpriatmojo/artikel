@@ -8,16 +8,16 @@ use App\Blog;
 class FrontController extends Controller
 {
     //
-    public function index()
+    public function viewall()
     {
         $b = Blog::orderBy('updated_at', 'DESC')->get();
-        return view('artikel.index',compact('b'));
+        return view('artikel.viewall',compact('b'));
     }
 
-        public function view_all()
+        public function index()
     {
         $c = Blog::orderBy('updated_at', 'DESC')->get();
-        return view('artikel.coba',compact('c'));
+        return view('artikel.index',compact('c'));
     }
 
 
