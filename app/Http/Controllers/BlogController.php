@@ -9,6 +9,7 @@ use App\Blog;
 use File;
 use Storage;
 use Auth;
+use DB;
 
 class BlogController extends Controller
 {
@@ -28,8 +29,13 @@ class BlogController extends Controller
 
     public function index()
     {
-        $b = Blog::all();
-        return view('admin.daftar-artikel')->with('b', $b);
+        // $b = Blog::all();
+        // return view('admin.daftar-artikel')->with('b', $b);
+
+        $b = DB::table('blogs')->paginate(10);
+        return view('admin.daftar-artikel')->with('b' , $b);
+
+
     }
 
     /**

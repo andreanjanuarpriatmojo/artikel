@@ -23,12 +23,12 @@
                 <br> <br>
                 <div class="col-md-6 zero_mp">
                     <div class="text-left">
-                        <a href="" class="Kegiatan_btn">Oldest Post</a>
+                        <a href="{{ url('blog',['id' => $previous] )}}" class="Kegiatan_btn">Oldest Post</a>
                     </div>
                 </div>
                 <div class="col-md-6 zero_mp">
                     <div class="text-right">
-                        <a href="" class="Kegiatan_btn">Newest Post</a>
+                        <a href="{{ url('blog',['id' => $next] )}}" class="Kegiatan_btn">Newest Post</a>
                     </div>
                 </div>
             </div>

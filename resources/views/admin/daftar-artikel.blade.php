@@ -32,27 +32,23 @@ Admin Page
                               </tr>
                             </thead>
                             <tbody>
-
-                            <?php $i = 1; ?>
-                              @foreach ($b as $b)
+                              <?php $no = $b->firstItem() - 1; ?>
+                              @foreach ($b as $data)
+                              <?php $no++; ?>
                               <tr>
+                                <td>{{$no}}</td>
+                                <td>{{$data->title}}</td>
+                                <td>{{$data->username}}</td>
+                                <td>{{$data->created_at}}</td>
+                                <td>{{$data->updated_at}}</td>
                                 <td>
-                                    {{$i++}}
+                                  <a href="{{ url('admin/artikel',['id' => $data->id] )}}" type="button" class="btn btn-primary btn-block"> View
                                 </td>
                                 <td>
-                                    {{$b->title}}
-                                </td>
-                                <td>{{$b->username}}</td>
-                                <td>{{$b->created_at}}</td>
-                                <td>{{$b->updated_at}}</td>
-                                <td>
-                                  <a href="{{ url('admin/artikel',['id' => $b->id] )}}" type="button" class="btn btn-primary btn-block"> View
+                                  <a href="{{ url('admin/artikel/edit',['id' => $data->id])}}" type="button" class="btn btn-warning btn-block"> Edit
                                 </td>
                                 <td>
-                                  <a href="{{ url('admin/artikel/edit',['id' => $b->id])}}" type="button" class="btn btn-warning btn-block"> Edit
-                                </td>
-                                <td>
-                                  <form class="" action="{{route('artikel.destroy', $b->id)}}" method="post">
+                                  <form class="" action="{{route('artikel.destroy', $data->id)}}" method="post">
                                     {{ method_field('DELETE') }}
                                     {{ csrf_field() }}
                                     <button type="submit" class="btn btn-danger btn-block">Hapus</button>
@@ -64,6 +60,7 @@ Admin Page
                           </table>
                         </div>
                       </div>
+                      {!! $b->render() !!}
                   </div>
               </div>
           </div>
