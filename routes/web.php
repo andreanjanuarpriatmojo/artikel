@@ -14,7 +14,7 @@
 Auth::routes();
 
 Route::get('/blog','FrontController@index');
-Route::get('/view','FrontController@view_all');
+Route::get('/view','FrontController@viewall');
 Route::get('/blog/{id}','FrontController@view');
 Route::get('/admin/artikel', 'BlogController@index')->name('artikel');
 Route::get('/admin/artikel/create', 'BlogController@create')->name('artikel.create');

@@ -21,8 +21,6 @@ class FrontController extends Controller
         $d = Blog::orderBy('updated_at', 'DESC')->get();
         $c = DB::table('blogs')->orderBy('updated_at','DESC')->paginate(5);
         return view('artikel.index',compact('c','d'));
-
-
     }
 
 
