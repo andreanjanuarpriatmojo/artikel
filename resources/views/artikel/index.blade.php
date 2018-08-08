@@ -58,7 +58,30 @@
                     @endforeach
                 </div>
             </div>
-            <!--End of col-md-4-->
+            <!--End of newest-->            
+            <div class="col-md-4">
+                <div class="Kegiatan_news_text">
+                    <h4>Artikel Terpopuler</h4>
+                    <br>
+                    <?php $count = 0; ?>
+                    @foreach ($populer as $pop)
+                    <?php if($count == 3) break; ?>
+                    <div class="Kegiatan_news">
+                        <div class="Kegiatan_single_item fix">
+                            <div class="Kegiatan_news_img floatleft">
+                                <img src="{{asset('uploads/images')}}/{{$pop->photo_path}}" alt="">
+                            </div>
+                            <div class="Kegiatan_news_text">
+                                <a href="{{ url('blog',['id' => $pop->id] )}}"><h4>{{$pop->title}}</h4></a>
+                                <p>{{ strip_tags(str_limit($pop->text, 30)) }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <?php $count++; ?>
+                    @endforeach
+                </div>
+            </div>
+            <!--End of popular-->
         </div>
         <!--End of row-->
     </div>

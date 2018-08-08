@@ -20,6 +20,7 @@ class Blog extends Migration
             $table->mediumtext('text');
             $table->string('photo_path',200);
             $table->string('username',100);
+            $table->integer('view_count')->default(0);
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
         });
