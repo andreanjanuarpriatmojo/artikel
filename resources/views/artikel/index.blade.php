@@ -40,61 +40,22 @@
                 <div class="Kegiatan_news_text">
                     <h4>Artikel Terbaru</h4>
                     <br>
+                    <?php $count = 0; ?>
+                    @foreach ($d as $blog)
+                    <?php if($count == 3) break; ?>
                     <div class="Kegiatan_news">
                         <div class="Kegiatan_single_item fix">
                             <div class="Kegiatan_news_img floatleft">
-                                <img src="{{asset('uploads/images')}}/{{$d[0]->photo_path}}" alt="">
+                                <img src="{{asset('uploads/images')}}/{{$blog->photo_path}}" alt="">
                             </div>
                             <div class="Kegiatan_news_text">
-                                <a href="{{ url('blog',['id' => $d[0]->id] )}}"><h4>{{$d[0]->title}}</h4></a>
-                                <p>{{ strip_tags(str_limit($d[0]->text, 30)) }}</p>
+                                <a href="{{ url('blog',['id' => $blog->id] )}}"><h4>{{$blog->title}}</h4></a>
+                                <p>{{ strip_tags(str_limit($blog->text, 30)) }}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="Kegiatan_news">
-                        <div class="Kegiatan_single_item fix">
-                            <div class="Kegiatan_news_img floatleft">
-                                <img src="{{asset('uploads/images')}}/{{$d[1]->photo_path}}" alt="">
-                            </div>
-                            <div class="Kegiatan_news_text">
-                                <a href="{{ url('blog',['id' => $d[1]->id] )}}"><h4>{{$d[1]->title}}</h4></a>
-                                <p>{{ strip_tags(str_limit($d[1]->text, 30)) }}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="Kegiatan_news">
-                        <div class="Kegiatan_single_item fix">
-                            <div class="Kegiatan_news_img floatleft">
-                                <img src="{{asset('uploads/images')}}/{{$d[2]->photo_path}}" alt="">
-                            </div>
-                            <div class="Kegiatan_news_text">
-                                <a href="{{ url('blog',['id' => $d[2]->id] )}}"><h4>{{$d[2]->title}}</h4></a>
-                                <p>{{ strip_tags(str_limit($d[2]->text, 30)) }}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="Kegiatan_news">
-                        <div class="Kegiatan_single_item fix">
-                            <div class="Kegiatan_news_img floatleft">
-                                <img src="{{asset('uploads/images')}}/{{$d[3]->photo_path}}" alt="">
-                            </div>
-                            <div class="Kegiatan_news_text">
-                                <a href="{{ url('blog',['id' => $d[3]->id] )}}"><h4>{{$d[3]->title}}</h4></a>
-                                <p>{{ strip_tags(str_limit($d[3]->text, 30)) }}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="Kegiatan_news">
-                        <div class="Kegiatan_single_item fix">
-                            <div class="Kegiatan_news_img floatleft">
-                                <img src="{{asset('uploads/images')}}/{{$d[4]->photo_path}}" alt="">
-                            </div>
-                            <div class="Kegiatan_news_text">
-                                <a href="{{ url('blog',['id' => $d[4]->id] )}}"><h4>{{$d[4]->title}}</h4></a>
-                                <p>{{ strip_tags(str_limit($d[4]->text, 30)) }}</p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php $count++; ?>
+                    @endforeach
                 </div>
             </div>
             <!--End of col-md-4-->
