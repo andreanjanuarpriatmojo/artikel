@@ -24,7 +24,6 @@ class BlogController extends Controller
         $this->middleware('auth');
     }
 
-     public $timestamps = false;
 
 
     public function index()
