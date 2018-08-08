@@ -16,7 +16,6 @@ Auth::routes();
 Route::get('/blog','FrontController@index');
 Route::get('/view','FrontController@view_all');
 Route::get('/blog/{id}','FrontController@view');
-Route::view('/isi', 'artikel.artikel');
 Route::get('/admin/artikel', 'BlogController@index')->name('artikel');
 Route::get('/admin/artikel/create', 'BlogController@create')->name('artikel.create');
 Route::post('/admin/artikel', 'BlogController@store')->name('artikel.store');
@@ -25,13 +24,3 @@ Route::get('/admin/artikel/edit/{id}', 'BlogController@edit')->name('artikel.edi
 Route::put('/admin/artikel/{id}', 'BlogController@update')->name('artikel.update');
 Route::delete('/admin/artikel/{id}','BlogController@destroy')->name('artikel.destroy');
 Route::view('/admin','admin.index')->name('admin')->middleware('auth');
-
-Route::view('/edito', 'admin.editor')->name('admin')->middleware('auth');
-//Route::get('/front', 'FrontController@index');
-// Route::view('/login','admin.login');
-// Route::view('/register','admin.register');
-
-
-//Route::resource('admin/artikel', 'BlogController');
-/*
-*/
