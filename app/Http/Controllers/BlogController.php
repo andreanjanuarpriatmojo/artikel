@@ -29,12 +29,9 @@ class BlogController extends Controller
     public function index()
     {
         // $b = Blog::all();
-        // return view('admin.daftar-artikel')->with('b', $b);
 
         $b = DB::table('blogs')->paginate(10);
         return view('admin.daftar-artikel')->with('b' , $b);
-
-
     }
 
     /**
@@ -72,8 +69,6 @@ class BlogController extends Controller
             $b->photo_path = $name;
         }
 
-        
-        //$b->save();
         if ($b->save()){
             return redirect()->route('artikel')->with('success', 'Berita telah diupload!');
         }
@@ -83,9 +78,7 @@ class BlogController extends Controller
 
     public function show($id)
     {
-        //di web
         $b = Blog::where('id', $id)->first();
-        // dd($view);
         return view('admin.view-artikel', compact('b'));
     }
 

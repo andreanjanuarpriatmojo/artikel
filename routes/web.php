@@ -24,3 +24,8 @@ Route::get('/admin/artikel/edit/{id}', 'BlogController@edit')->name('artikel.edi
 Route::put('/admin/artikel/{id}', 'BlogController@update')->name('artikel.update');
 Route::delete('/admin/artikel/{id}','BlogController@destroy')->name('artikel.destroy');
 Route::view('/admin','admin.index')->name('admin')->middleware('auth');
+
+
+/*Laraval Based View
+Route::view('cb','home');
+Route::view('cb1','welcome');*/
