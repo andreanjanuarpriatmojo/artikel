@@ -25,7 +25,7 @@ class FrontController extends Controller
     }
 
 
-    public function view($id, BLog $post){
+    public function view($id, Blog $post){
 
         // Increment count of view post
         $post=BLog::find($id);
