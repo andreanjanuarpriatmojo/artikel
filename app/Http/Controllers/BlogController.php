@@ -30,7 +30,7 @@ class BlogController extends Controller
     {
         // $b = Blog::all();
 
-        $b = DB::table('blogs')->paginate(10);
+        $b = DB::table('blogs')->orderBy('updated_at','DESC')->paginate(10);
         return view('admin.daftar-artikel')->with('b' , $b);
     }
 

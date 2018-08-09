@@ -308,6 +308,12 @@ input: -webkit-autofill:focus {
     font-family: 'Roboto Slab', serif;
     font-weight: 700;
 }
+#Kegiatan .Kegiatan_text h3 {
+    color: #454444;
+    font-size: 23px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 800;
+}
 #Kegiatan .Kegiatan_text h6 {
     padding-bottom: 20px;
     font-size: 14px;
@@ -346,6 +352,14 @@ input: -webkit-autofill:focus {
     font-family: 'Roboto Slab', serif;
     font-weight: 700;
 }
+
+.Kegiatan_news_text h3 {
+    color: #454444;
+    font-size: 23px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 800;
+}
+
 #Kegiatan .Kegiatan_news_text p {
     padding-top: 10px;
     font-size: 14px;

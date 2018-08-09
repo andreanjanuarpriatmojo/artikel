@@ -20,7 +20,7 @@
                     	<p>{!! $blog->text !!}</p>
                 	</div>
                 </div>
-                <br> <br>
+                <br><br>
                 <div class="col-md-6 zero_mp">
                     <div class="text-left">
                         <a href="{{ url('blog',['id' => $previous] )}}" class="Kegiatan_btn">Oldest Post</a>
@@ -31,6 +31,51 @@
                         <a href="{{ url('blog',['id' => $next] )}}" class="Kegiatan_btn">Newest Post</a>
                     </div>
                 </div>
+                <br><br><br>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form class="form-inline">
+                            <textarea class="form-control" placeholder="Write your comment here!" style="resize: none;padding: 20px;height: 100px;width: 100%;border: 2px solid #F2F2F2;margin-bottom: 1em"></textarea>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="comment_name" placeholder="Write your name!" style="border: 2px solid #F2F2F2;padding: 20px;">
+                                <input class="form-control" type="text" name="comment_email" placeholder="Write your email!" style="border: 2px solid #F2F2F2;padding: 20px;">
+                            </div>
+                            <a class="Kegiatan_btn pull-right" type="button" href="" style="padding: 10px;">Comment!</a>
+                        </form>
+                    </div>
+                </div>
+                <br>
+                <div class="Kegiatan_news_text">
+                    <h4>20 comments :</h4>
+                </div>
+                <br>
+                <div class="col-md-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
+                        </div>
+                        <div class="panel-body">
+                            isi comment an nya!!!
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
+                        </div>
+                        <div class="panel-body">
+                            isi comment an nya!!!
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
+                        </div>
+                        <div class="panel-body">
+                            isi comment an nya!!!
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             <!--End of col-md-8-->
             <div class="col-md-4">
@@ -47,7 +92,7 @@
                             </div>
                             <div class="Kegiatan_news_text">
                                 <a href="{{ url('blog',['id' => $blog->id] )}}"><h4>{{$blog->title}}</h4></a>
-                                <p>{{ strip_tags(str_limit($blog->text, 30)) }}</p>
+                                <p>{!! strip_tags(str_limit($blog->text, 60)) !!}</p>
                             </div>
                         </div>
                     </div>
@@ -56,7 +101,7 @@
                 </div>
             </div>
             <!--End of col-md-4-->
-                        <div class="col-md-4">
+            <div class="col-md-4">
                 <div class="Kegiatan_news_text">
                     <h4>Artikel Terpopuler</h4>
                     <br>
@@ -70,7 +115,7 @@
                             </div>
                             <div class="Kegiatan_news_text">
                                 <a href="{{ url('blog',['id' => $pop->id] )}}"><h4>{{$pop->title}}</h4></a>
-                                <p>{{ strip_tags(str_limit($pop->text, 30)) }}</p>
+                                <p>{!! strip_tags(str_limit($pop->text, 60)) !!}</p>
                             </div>
                         </div>
                     </div>
