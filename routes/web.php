@@ -25,6 +25,11 @@ Route::put('/admin/artikel/{id}', 'BlogController@update')->name('artikel.update
 Route::delete('/admin/artikel/{id}','BlogController@destroy')->name('artikel.destroy');
 Route::view('/admin','admin.index')->name('admin')->middleware('auth');
 
+//Route COmment
+
+Route::post('/comment/store', 'CommentController@store')->name('comment.add');
+
+
 
 /*Laraval Based View
 Route::view('cb','home');
