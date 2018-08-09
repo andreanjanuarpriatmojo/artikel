@@ -4,6 +4,8 @@ namespace App;
 
 use App\Observers\UserObserver;
 use Illuminate\Database\Eloquent\Model;
+use App\Comment;
+
 
 class blog extends Model
 {

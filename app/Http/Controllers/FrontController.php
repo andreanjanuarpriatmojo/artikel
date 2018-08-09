@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Blog;
 use App\User;
 use DB;
-
 class FrontController extends Controller
 {
     //

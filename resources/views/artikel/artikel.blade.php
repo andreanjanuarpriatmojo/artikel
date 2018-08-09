@@ -34,13 +34,15 @@
                 <br><br><br>
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <form class="form-inline">
-                            <textarea class="form-control" placeholder="Write your comment here!" style="resize: none;padding: 20px;height: 100px;width: 100%;border: 2px solid #F2F2F2;margin-bottom: 1em"></textarea>
+                        <form method="post" class="form-inline" action="{{ route('comment.add') }}">
+                             @csrf
+                            <textarea name="comment" class="form-control" placeholder="Write your comment here!" style="resize: none;padding: 20px;height: 100px;width: 100%;border: 2px solid #F2F2F2;margin-bottom: 1em"></textarea>
                             <div class="form-group">
-                                <input class="form-control" type="text" name="comment_name" placeholder="Write your name!" style="border: 2px solid #F2F2F2;padding: 20px;">
-                                <input class="form-control" type="text" name="comment_email" placeholder="Write your email!" style="border: 2px solid #F2F2F2;padding: 20px;">
+                                <input class="form-control" type="text" name="name" placeholder="Write your name!" style="border: 2px solid #F2F2F2;padding: 20px;">
+                                <input class="form-control" type="text" name="email" placeholder="Write your email!" style="border: 2px solid #F2F2F2;padding: 20px;">
                             </div>
-                            <a class="Kegiatan_btn pull-right" type="button" href="" style="padding: 10px;">Comment!</a>
+                            <button  type="submit" name="button" class="btn btn-info btn-block" type="submit">Comment</button>
+                            <!-- <a class="Kegiatan_btn pull-right" type="submit" href="" style="padding: 10px;">Comment!</a> -->
                         </form>
                     </div>
                 </div>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Blog;
+use App\Comment;
 
 class CommentController extends Controller
 {
@@ -10,9 +12,10 @@ class CommentController extends Controller
 	public function store(Request $request)
     {
         $comment = new Comment;
-        $comment->body = $request->get('comment_body');
-        $comment->user()->associate($request->user());
-        $post = Post::find($request->get('post_id'));
+        $comment->comment = $request->comment;
+        $comment->name = $request->name;
+        $comment->email = $request->name;
+        $post = Blog::find($request->get('id'));
         $post->comments()->save($comment);
 
         return back();
