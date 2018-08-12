@@ -19,6 +19,7 @@ class FrontController extends Controller
     {
         $d = Blog::orderBy('updated_at', 'DESC')->get();
         $populer = Blog::orderBy('view_count', 'DESC')->get();
+
         $c = DB::table('blogs')->orderBy('updated_at','DESC')->paginate(5);
         return view('artikel.index',compact('c','d','populer'));
     }
@@ -39,7 +40,7 @@ class FrontController extends Controller
         $user = Blog::find($id);
         $previous = Blog::where('id', '<', $user->id)->max('id');
         $next = Blog::where('id', '>', $user->id)->min('id');
-    	return view('artikel.artikel', compact('populer','blog','bg','previous','next'));
+    	return view('artikel.artikel', compact('populer','blog','bg','previous','next','post'));
 
 
     }

@@ -14,10 +14,25 @@ class CommentController extends Controller
         $comment = new Comment;
         $comment->comment = $request->comment;
         $comment->name = $request->name;
-        $comment->email = $request->name;
-        $post = Blog::find($request->get('id'));
+        $comment->email = $request->email;
+        $post = Blog::find($request->get('post_id'));
         $post->comments()->save($comment);
 
         return back();
+    }
+
+    public function replyStore(Request $request)
+    {
+        $reply = new Comment();
+        $reply->comment = $request->comment;
+        $reply->name = $request->name;
+        $reply->email = $request->email;
+        $reply->parent_id = $request->get('comment_id');
+        $post = Blog::find($request->get('post_id'));
+
+        $post->comments()->save($reply);
+
+        return back();
+
     }
 }

@@ -28,6 +28,7 @@ Route::view('/admin','admin.index')->name('admin')->middleware('auth');
 //Route COmment
 
 Route::post('/comment/store', 'CommentController@store')->name('comment.add');
+Route::post('/reply/store', 'CommentController@replyStore')->name('reply.add');
 
 
 

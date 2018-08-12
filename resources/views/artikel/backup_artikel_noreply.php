@@ -31,15 +31,8 @@
                         <a href="{{ url('blog',['id' => $next] )}}" class="Kegiatan_btn">Newest Post</a>
                     </div>
                 </div>
-                <br><br><br>
-
-                <br>
-                <div class="Kegiatan_news_text">
-                    <h4>Display Comments</h4>
-                    @include('artikel.comment.replies', ['comments' => $post->comments, 'post_id' => $post->id])
-                </div>
-                <br>
-
+                <br><br><br><br>
+                
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <form method="post" class="form-inline" action="{{ route('comment.add') }}">
@@ -48,14 +41,31 @@
                             <div class="form-group">
                                 <input class="form-control" type="text" name="name" placeholder="Write your name!" style="border: 2px solid #F2F2F2;padding: 20px;">
                                 <input class="form-control" type="text" name="email" placeholder="Write your email!" style="border: 2px solid #F2F2F2;padding: 20px;">
-                                <input type="hidden" name="post_id" value="{{ $post->id }}" />
-                                <button  type="submit" class="btn btn-info btn-block" style=" margin-left: 50px;     border: 5px padding: 5px; width: 100px; display: inline; " >Comment</button>
+                                <input type="hidden" name="post_id" value="{{ $post->id }}">
+                                <button  type="submit" class="btn btn-info btn-block" style=" margin-left: 20px; border: 5px padding: 5px; width: 100px; display: inline; " >Comment</button>
                             </div>
                             <!-- <a class="Kegiatan_btn pull-right" type="submit" href="" style="padding: 10px;">Comment!</a> -->
                         </form>
                     </div>
+                </div>  
+
+                <div class="Kegiatan_news_text">
+                    <h4>Display Comments</h4>
+                    <br>
+                    @foreach($post->comments as $comment)
+                        <div class="col-md-8">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <strong>{{ $comment->name }}</strong> <span class="text-muted">commented 5 days ago</span>
+                                </div>
+                                <div class="panel-body">
+                                    {{ $comment->comment }}
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                <br>
                 </div>
-                
             </div>
             <!--End of col-md-8-->
             <div class="col-md-4">
