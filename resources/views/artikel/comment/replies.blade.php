@@ -19,7 +19,7 @@
                             <input class="form-control" type="text" name="name" placeholder="Write your name!" style="border: 2px solid #F2F2F2;padding: 20px;">
                             <input class="form-control" type="text" name="email" placeholder="Write your email!" style="border: 2px solid #F2F2F2;padding: 20px;">
                             <input type="hidden" name="post_id" value="{{ $post->id }}" />
-                            
+                            <input type="hidden" name="comment_id" value="{{ $comment->id }}" />
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btn btn-warning" value="Reply" />

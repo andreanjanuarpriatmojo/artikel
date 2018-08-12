@@ -36,6 +36,7 @@
                 <br>
                 <div class="Kegiatan_news_text">
                     <h4>Display Comments</h4>
+                    <br><br>
                     @include('artikel.comment.replies', ['comments' => $post->comments, 'post_id' => $post->id])
                 </div>
                 <br>
