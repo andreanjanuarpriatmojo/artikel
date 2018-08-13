@@ -19,7 +19,7 @@
                             <div class="blog_news">
                                 <div class="single_blog_item">
                                     <div class="blog_img">
-                                        <img src="{{asset('uploads/images')}}/{{$bl->photo_path}}" alt="">
+                                        <img src="{{asset('uploads/images')}}/{{$bl->photo_path}}" class="img-fluid" alt="">
                                     </div>
                                     <div class="blog_content">
                                         <h3>{{ strip_tags(str_limit($bl->title, 50)) }}</h3>

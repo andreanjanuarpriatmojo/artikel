@@ -12,7 +12,7 @@
                     <div class="col-md-6 zero_mp">
                         <div class="Kegiatan_item">
                             <div class="Kegiatan_img">
-                                <img src="{{asset('uploads/images')}}/{{$data->photo_path}}" alt="">
+                                <img src="{{asset('uploads/images')}}/{{$data->photo_path}}" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                     <div class="Kegiatan_news">
                         <div class="Kegiatan_single_item fix">
                             <div class="Kegiatan_news_img floatleft">
-                                <img src="{{asset('uploads/images')}}/{{$blog->photo_path}}" alt="">
+                                <img src="{{asset('uploads/images')}}/{{$blog->photo_path}}" class="img-fluid" alt="">
                             </div>
                             <div class="Kegiatan_news_text">
                                 <a href="{{ url('blog',['id' => $blog->id] )}}"><h4>{{$blog->title}}</h4></a>
@@ -69,7 +69,7 @@
                     <div class="Kegiatan_news">
                         <div class="Kegiatan_single_item fix">
                             <div class="Kegiatan_news_img floatleft">
-                                <img src="{{asset('uploads/images')}}/{{$pop->photo_path}}" alt="">
+                                <img src="{{asset('uploads/images')}}/{{$pop->photo_path}}" class="img-fluid" alt="">
                             </div>
                             <div class="Kegiatan_news_text">
                                 <a href="{{ url('blog',['id' => $pop->id] )}}"><h4>{{$pop->title}}</h4></a>
@@ -88,5 +88,48 @@
     <!--End of container-->
 </section>
 <!--end of Kegiatan-->
+
+<style>
+
+ul.pagination li {
+    color: white;
+    display: inline;
+    font-size: 18px;
+    background-color: black; 
+    text-decoration: none;
+}
+
+ul.pagination li a {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #DDDDDD;
+}
+
+ul.pagination li a.active {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #DDDDDD;
+}
+
+ul.pagination li.active {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
+ul.pagination li a:hover {
+    background-color: #43a906;
+    color: white;
+}
+
+ul.pagination li.disabled {
+    color: black;
+    text-decoration: none;
+}
+
+</style>
 
 @endsection

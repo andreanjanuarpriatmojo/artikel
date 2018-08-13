@@ -15,7 +15,7 @@
                     </p>
                     <br> <br>
                     <div class="Kegiatan_img_artikel">
-                    	<img src="{{asset('uploads/images')}}/{{$blog->photo_path}}" alt="">
+                    	<img src="{{asset('uploads/images')}}/{{$blog->photo_path}}" class="img-fluid" alt="">
                     	<br> <br>
                     	<p>{!! $blog->text !!}</p>
                 	</div>
@@ -32,15 +32,13 @@
                     </div>
                 </div>
                 <br><br><br>
-
                 <br>
                 <div class="Kegiatan_news_text">
-                    <h4>Display Comments</h4>
+                    <h4>Comments</h4>
                     <br><br>
                     @include('artikel.comment.replies', ['comments' => $post->comments, 'post_id' => $post->id])
                 </div>
                 <br>
-
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <form method="post" class="form-inline" action="{{ route('comment.add') }}">
@@ -50,9 +48,8 @@
                                 <input class="form-control" type="text" name="name" placeholder="Write your name!" style="border: 2px solid #F2F2F2;padding: 20px;">
                                 <input class="form-control" type="text" name="email" placeholder="Write your email!" style="border: 2px solid #F2F2F2;padding: 20px;">
                                 <input type="hidden" name="post_id" value="{{ $post->id }}" />
-                                <button  type="submit" class="btn btn-info btn-block" style=" margin-left: 50px;     border: 5px padding: 5px; width: 100px; display: inline; " >Comment</button>
+                                <button  type="submit" class="btn Kegiatan_btn btn-block" style="margin-left: 150px;     border: 5px padding: 5px; width: 100px; display: inline;">Comment</button>
                             </div>
-                            <!-- <a class="Kegiatan_btn pull-right" type="submit" href="" style="padding: 10px;">Comment!</a> -->
                         </form>
                     </div>
                 </div>
@@ -69,7 +66,7 @@
                     <div class="Kegiatan_news">
                         <div class="Kegiatan_single_item fix">
                             <div class="Kegiatan_news_img floatleft">
-                                <img src="{{asset('uploads/images')}}/{{$blog->photo_path}}" alt="">
+                                <img src="{{asset('uploads/images')}}/{{$blog->photo_path}}" class="img-fluid" alt="">
                             </div>
                             <div class="Kegiatan_news_text">
                                 <a href="{{ url('blog',['id' => $blog->id] )}}"><h4>{{$blog->title}}</h4></a>
@@ -92,7 +89,7 @@
                     <div class="Kegiatan_news">
                         <div class="Kegiatan_single_item fix">
                             <div class="Kegiatan_news_img floatleft">
-                                <img src="{{asset('uploads/images')}}/{{$pop->photo_path}}" alt="">
+                                <img src="{{asset('uploads/images')}}/{{$pop->photo_path}}" class="img-fluid" alt="">
                             </div>
                             <div class="Kegiatan_news_text">
                                 <a href="{{ url('blog',['id' => $pop->id] )}}"><h4>{{$pop->title}}</h4></a>
