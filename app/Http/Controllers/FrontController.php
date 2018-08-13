@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Blog;
 use App\User;
+use App\Comment;
 use DB;
 class FrontController extends Controller
 {
@@ -31,6 +32,15 @@ class FrontController extends Controller
         $post=BLog::find($id);
         $post->view_count += 1 ;
         $post->save();
+
+        $commentpost=Comment::find($id);
+        $commentpost->comment_count += 1;
+        $commentpost->save();
+
+
+        $comments = Comment::where('commentable_id', $id)->orderBy('created_at', 'ASC');
+
+
         //sort based view count
         $populer = Blog::orderBy('view_count', 'DESC')->get();
 
