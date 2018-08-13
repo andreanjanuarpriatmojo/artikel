@@ -339,6 +339,21 @@ input: -webkit-autofill:focus {
 #Kegiatan a.Kegiatan_btn:hover {
     background: #43a906;
 }
+
+#Kegiatan button.Kegiatan_btn {
+    background: #101010;
+    padding: 5px 15px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 2px;
+    transition: 0.7s ease;
+    font-family: 'Open Sans', sans-serif;
+}
+#Kegiatan button.Kegiatan_btn:hover {
+    background: #43a906;
+}
+
 #Kegiatan .Kegiatan_news {
     padding-bottom: 27px;
 }
