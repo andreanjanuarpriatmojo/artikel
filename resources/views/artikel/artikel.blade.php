@@ -35,10 +35,8 @@
                 <br>
                 <div class="Kegiatan_news_text">
                     <h4>Comments</h4>
-                    <br><br>
-                    @include('artikel.comment.replies', ['comments' => $post->comments, 'post_id' => $post->id])
+                    <br>
                 </div>
-                <br>
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <form method="post" class="form-inline" action="{{ route('comment.add') }}">
@@ -53,7 +51,9 @@
                         </form>
                     </div>
                 </div>
-                
+                <div>
+                    @include('artikel.comment.replies', ['comments' => $post->comments, 'post_id' => $post->id])
+                </div>
             </div>
             <!--End of col-md-8-->
             <div class="col-md-4">

@@ -36,6 +36,7 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+
     </head>
 
     <body data-spy="scroll" data-target="#header">
@@ -72,7 +73,7 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>-->
         <script src="{{url('artikel/js/jquery-1.12.3.min.js')}}"></script>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!--Counter UP Waypoint-->
         <script src="{{url('artikel/js/waypoints.min.js')}}"></script>
         <!--Counter UP-->
@@ -108,6 +109,7 @@
         <script src="{{url('artikel/js/bootstrap.min.js')}}"></script>
         <!-- Custom JavaScript-->
         <script src="{{url('artikel/js/main.js')}}"></script>
+        <script src="{{url('artikel/js/hide.js')}}"></script>
     </body>
 
 </html>

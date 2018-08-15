@@ -33,9 +33,9 @@ class FrontController extends Controller
         $post->view_count += 1 ;
         $post->save();
 
-        $commentpost=Comment::find($id);
-        $commentpost->comment_count += 1;
-        $commentpost->save();
+        //$commentpost=Comment::find($id);
+        //$commentpost->comment_count += 1;
+        //$commentpost->save();
 
 
         $comments = Comment::where('commentable_id', $id)->orderBy('created_at', 'ASC');
